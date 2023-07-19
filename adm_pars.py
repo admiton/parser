@@ -120,7 +120,6 @@ questions = questions[1:]
 
 parsed_questions = []
 
-
 for question in questions:
     if question.strip():
         questions_properties = parse_question(question)
