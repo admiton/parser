@@ -2,7 +2,7 @@ from PyPDF2 import PdfReader
 import re
 import json
 
-reader = PdfReader('info.pdf')
+reader = PdfReader('2022.pdf')
 
 
 def adjust_answer(line):
@@ -29,7 +29,11 @@ def adjust_question(line):
         line = re.sub(r'([A-D]\.)( )?', r'\n\1\n', line)
     # we want to have clearly the algorithm separated between the Algorithm and EndAlg
     if re.search(r'Alg', line):
-        line = re.sub(r'(EndAlg\w*)( *)(.*$)', r'\1\n\n\3', line)
+        line = re.sub(r'(\d+\. *)?(Alg\w*)( *)(.*$)', r'\2\n\n\4', line)
+        can_strip ^= 1
+
+    if re.search(r'EndAlg', line):
+        line = re.sub(r'(\d+\. *)?(EndAlg\w*)( *)(.*$)', r'\1\n\n\3', line)
         can_strip ^= 1
 
     line = line.rstrip()
@@ -106,7 +110,7 @@ for line in lines:
     else:
         line = adjust_question(line)
         # if the line starts with a digit followed by a period, it's the start of a new question
-        if re.match(r' *\d+\.', line):
+        if re.match(r' *\d+\. \w', line):
             if current_question:
                 questions.append('\n'.join(current_question))
             current_question = [line]
@@ -124,12 +128,12 @@ for question in questions:
     if question.strip():
         questions_properties = parse_question(question)
         # add the correct answer to the question
-        questions_properties["correct_answers"] = correct_answers.pop(0)
+        # questions_properties["correct_answers"] = correct_answers.pop(0)
         # add index to the question
         questions_properties["index"] = len(parsed_questions) + 1
         parsed_questions.append(questions_properties)
 
 parsed_questions = json.dumps(parsed_questions, indent=4, ensure_ascii=False)
 
-with open('questions.json', 'w', encoding='utf-8') as f:
+with open('questions2022.json', 'w', encoding='utf-8') as f:
     f.write(parsed_questions)
