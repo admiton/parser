@@ -2,8 +2,6 @@ from PyPDF2 import PdfReader
 import re
 import json
 
-reader = PdfReader("2022.pdf")
-
 
 def adjust_answer(line):
     # if the line starts with digits, followed by period, we remove the digits
@@ -83,59 +81,86 @@ def parse_question(text):
     return parsed_dict
 
 
-text = ""
+# converts a pdf into raw text
+def parse_pdf(filename, pgs=40):
+    # pgs -> how many pages to parse
 
-for i in range(len(reader.pages)):
-    page = reader.pages[i]
+    reader = PdfReader(filename)
 
-    page_text = page.extract_text()
-    text += page_text
+    text = ""
 
-lines = text.split("\n")
+    for i in range(min(len(reader.pages), pgs)):
+        page = reader.pages[i]
 
-questions = []
-current_question = []
-correct_answers = []
+        page_text = page.extract_text()
+        text += page_text
 
-# 0 - questions, 1 - answers
-category = 1
+    return text
 
-for line in lines:
-    if re.match(r"BAB", line.strip()):
-        category ^= 1
 
-    if category:
-        line = adjust_answer(line)
+# converts raw text into an array of questions
+def parse_text(text):
+    lines = text.split("\n")
 
-        if re.match(r"^[A-D]+$", line):
-            correct_answers.append(line)
-    else:
-        line = adjust_question(line)
-        # if the line starts with a digit followed by a period, it's the start of a new question
-        if re.match(r" *\d+\. \w", line):
-            if current_question:
-                questions.append("\n".join(current_question))
-            current_question = [line]
+    questions = []
+    current_question = []
+    correct_answers = []
+
+    # 0 - questions, 1 - answers
+    category = 1
+
+    for line in lines:
+        if re.match(r"BAB", line.strip()):
+            category ^= 1
+
+        if category:
+            line = adjust_answer(line)
+
+            if re.match(r"^[A-D]+$", line):
+                correct_answers.append(line)
         else:
-            current_question.append(line)
+            line = adjust_question(line)
+            # if the line starts with a digit followed by a period, it's the start of a new question
+            if re.match(r" *\d+\. \w", line):
+                if current_question:
+                    questions.append("\n".join(current_question))
+                current_question = [line]
+            else:
+                current_question.append(line)
 
-if current_question:
-    questions.append("\n".join(current_question))
+    if current_question:
+        questions.append("\n".join(current_question))
 
-questions = questions[1:]
+    questions = questions[1:]
 
-parsed_questions = []
+    parsed_questions = []
 
-for question in questions:
-    if question.strip():
-        questions_properties = parse_question(question)
-        # add the correct answer to the question
-        # questions_properties["correct_answers"] = correct_answers.pop(0)
-        # add index to the question
-        questions_properties["index"] = len(parsed_questions) + 1
-        parsed_questions.append(questions_properties)
+    print(correct_answers)
 
-parsed_questions = json.dumps(parsed_questions, indent=4, ensure_ascii=False)
+    for question in questions:
+        if question.strip():
+            questions_properties = parse_question(question)
+            # add the correct answer to the question
+            # questions_properties["correct_answers"] = correct_answers.pop(0)
+            # add index to the question
+            questions_properties["index"] = len(parsed_questions) + 1
+            parsed_questions.append(questions_properties)
 
-# with open('questions2022.json', 'w', encoding='utf-8') as f:
-#     f.write(parsed_questions)
+    # print(parsed_questions)
+    return parsed_questions
+
+
+# converts a pdf-file into a json array of questions
+def pdf_to_json(filename, pgs=40):
+    text = parse_pdf(filename, pgs)
+    parsed_questions = parse_text(text)
+    parsed_questions = json.dumps(parsed_questions, indent=4, ensure_ascii=False)
+    return parsed_questions
+
+
+if __name__ == "__main__":
+    filename = "2022.pdf"
+    parsed_questions = pdf_to_json(filename)
+
+    with open("questions.json", "w") as f:
+        f.write(parsed_questions)
