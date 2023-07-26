@@ -68,7 +68,7 @@ class AdmitoParser:
                 parsed_questions = self.admito_parser.parse_text(text)
                 self.subjects_texts.append(parsed_questions)
 
-                # os.remove("file.pdf")
+                os.remove("file.pdf")
             else:
                 text = self.admito_parser.parse_pdf(filename)
                 self.subjects_texts.append(text)
