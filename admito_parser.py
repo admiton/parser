@@ -9,12 +9,15 @@ class PdfParser:
 
     def adjust_answer(self, line):
         # if the line starts with digits, followed by period, we remove the digits
-        if re.match(r"\d+\.", line):
-            line = re.sub(r"\d+\. ", "", line)
+        if re.match(r"\d+", line):
+            line = re.sub(r"\d+ ", "", line)
 
         # if the line contains points, we remove them, and also the digits
-        if re.search(r"\d\.?\d* points", line):
-            line = re.sub(r"\d*\.?\d* points", "", line)
+        if re.search(r" points", line):
+            line = re.sub(r" points", "", line)
+
+        # remove all the (, ) groups
+        line = re.sub(r", ", "", line)
 
         line = line.strip()
 
@@ -156,8 +159,8 @@ class PdfParser:
 # Usage example:
 if __name__ == "__main__":
     pdf_parser = PdfParser()
-    filename = "2022.pdf"
+    filename = "2022-iulie/2022-iulie.pdf"
     parsed_questions = pdf_parser.pdf_to_json(filename)
 
-    # with open("questions.json", "w") as f:
-    #     f.write(parsed_questions)
+    with open("questions.json", "w") as f:
+        f.write(parsed_questions)

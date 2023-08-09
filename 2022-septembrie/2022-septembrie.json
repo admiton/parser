@@ -1,0 +1,572 @@
+[
+    {
+        "question": "Let us consider algorithm decide(n, x) , where n  is a natural number (1 ≤ n ≤ 10000) and x is an array with n  integers  (x[1], x[2], ..., x[n], -100 ≤ x [i] ≤ 100, for  i  = 1, 2, ..., n ): In which of the following conditions will the algorithm return True ? ",
+        "answers": [
+            {
+                "A": "If array x has elements 1, 2, 3, …, 10."
+            },
+            {
+                "B": "If array x is strictly increasing."
+            },
+            {
+                "C": "If array x contains no negative elements."
+            },
+            {
+                "D": "If array x has positive elements before the negative ones."
+            }
+        ],
+        "code": "Algorithm decide(n, x):\n    b ← True\n    i ← 1\n    While b = True AND i < n execute\n        If  x[i] < x[i + 1] then\n            b ← True\n        else\n            b ← False\n        EndIf\n        i ← i + 1\n    EndWhile\n    return  b\nEndAlgorithm",
+        "index": 1
+    },
+    {
+        "question": "Let us consider a natural number that does not contain any digits equal to zero, given by array a (a[1], a[2], ..., a[ n]) that contains its n  digits (1 ≤ n ≤ 10  at the initial call ). State w hich of the following algorithms return True  if a number provided in this form is a palindrome and False  otherwise. A number is a palindrome if its value when read from left to right is equal to its value when read from right to left. ",
+        "answers": [
+            {
+                "A": "Algorithm palindrom_1(a, n):\ni ← 1\nj ← n\nk ← True\nWhile (i ≤ j) AND (k = True) execute\nIf  a[i] = a[j] then\ni ← i + 1\nj ← j - 1\nelse\nk ← False\nEndIf\nEndWhile\nreturn  k\nEndAlgorithm"
+            },
+            {
+                "B": "Algorithm translatare(a, n):\n    For i = 1, n -  1 execute\n        a[i] ← a[i + 1]\n    EndFor\nEndAlgorithm\n\nAlgorithm palindrom_2(a, n):\nj ← n\nIf (j = 0) OR (j = 1) then\nreturn  True\nEndIf\nIf a[1] = a[j] then\ntranslatare(a, n)\nreturn  palindrom_2(a, n - 2)\nEndIf\nreturn  False\nEndAlgorithm\n\n2"
+            },
+            {
+                "C": "Algorithm palindrom_3(a, n):\n    i ← n\n    j ← 1\n    k ← True\n    sum1 ← 0\n    sum2 ← 0\n    While (i > n DIV 2) AND (j ≤ n DIV  2)\nexecute\n        sum1 ← sum1 + a[i]\n        sum2 ← sum2 + a[j]\n        i ← i - 1\n        j ← j + 1\n    EndWhile\n    If sum1 = sum2 then\n        k ← True\n    else\n        k ← False\n    EndIf\n    return  k\nEndAlgorithm"
+            },
+            {
+                "D": "Algorithm palindrom_4(a, n):\ni ← 1\nj ← n\nk ← True\nWhile (i ≤ j) AND (k = True) execute\nIf  (a[i] = a[j]) AND (i MOD 2 = 0)\nAND (j MOD 2 = 0) then\ni ← i + 1\nj ← j - 1\nelse\nk ← False\nEndIf\nEndWhile\nreturn  k\nEndAlgorithm"
+            }
+        ],
+        "code": "",
+        "index": 2
+    },
+    {
+        "question": "Let us consider algorithm F(n), where n  is a natural number (1 ≤ n ≤ 109). State which of the following statements are correct: ",
+        "answers": [
+            {
+                "A": "If n = 812376, the algorithm returns 6."
+            },
+            {
+                "B": "If n = 8237631, the algorithm returns 1."
+            },
+            {
+                "C": "If n = 4868, the algorithm returns 8."
+            },
+            {
+                "D": "If n = 51, the algorithm returns 0."
+            }
+        ],
+        "code": "Algorithm F(n):\n    If n < 10 then\n        return  n\n    EndIf\n    u ← n MOD 10\n    p ← F(n DIV 10)\n    If u MOD 5 ≤ p MOD 5 then\n        return  u\n    EndIf\n    return  p\nEndAlgorithm",
+        "index": 3
+    },
+    {
+        "question": "Let us consider algorithm f(n), where the parameter n  is a natural number (1 ≤ n  ≤ 109). 3 Which of the following statements are true? ",
+        "answers": [
+            {
+                "A": "The algorithm returns the number of digits of number n."
+            },
+            {
+                "B": "The algorithm returns the number of occurrences of the digit with the largest value in number n ."
+            },
+            {
+                "C": "The algorithm returns one of the digits with the greatest number of occurrences in the number n ."
+            },
+            {
+                "D": "The al gorithm returns the number of digits that have the greatest number of occurrences in the\nnumber n ."
+            }
+        ],
+        "code": "Algorithm f(n):\nv ← 0; z ← 0;\nFor c ← 0, 9 execute\nx ← n\nk ← 0\nWhile x > 0 execute\nIf  x MOD 10 = c then\nk ← k + 1\nEndIf\nx ← x DIV 10\nEndWhile\nIf  k > v then\nv ← k\nz ← c\nEndIf\nEndFor\nreturn  z\nEndAlgorithm",
+        "index": 4
+    },
+    {
+        "question": "Which of the following algorithms prints the binary representation of natural number x (0 < x ≤ 109 at the initial call) that is provided as a parameter? ",
+        "answers": [
+            {
+                "A": "Algorithm imp(x):\n    If x = 0 then\n        r ← x MOD 2\n        imp(x DIV 2)\n        write r\n    EndIf\nEndAlgorithm"
+            },
+            {
+                "C": "Algorithm imp(x):\nIf x = 0 then\nr ← x DIV 2\nimp(x DIV 2)\nwrite r\nEndIf\nEndAlgorithm"
+            },
+            {
+                "B": "Algorithm imp(x):\n    If x ≠ 0 then\n        r ← x MOD 2\n        imp(x DIV 2)\n        write r\n    EndIf\nEndAlgorithm"
+            },
+            {
+                "D": "Algorithm imp(x):\nIf x ≠ 0 then\nr ← x MOD 2\nimp(x)\nwrite r\nEndIf\nEndAlgorithm"
+            }
+        ],
+        "code": "",
+        "index": 5
+    },
+    {
+        "question": "Which of the following statements regarding the algorithms in problem statement 5 are true? ",
+        "answers": [
+            {
+                "A": "During the execution of the algorithm from option A nothing is printed."
+            },
+            {
+                "B": "The algorithm from option B will not call itself recursively for any valid value of parame ter x"
+            },
+            {
+                "C": "The algorithm from option C would be correct if we replace d \"=\" with \"≠\""
+            },
+            {
+                "D": "The algorithm from option D would be correct, if we replace d \"imp(x) \" with \"imp(x DIV 2)\"."
+            }
+        ],
+        "code": "",
+        "index": 6
+    },
+    {
+        "question": "Let us consider the integer numbers a and b (-1000 ≤ a, b ≤ 1000) and the expression: NOT ((a > 0) AND (b > 0)) . Which of the following expressions are equivalent to the given expression? ",
+        "answers": [
+            {
+                "A": "(NOT (a < 0)) AND (NOT (b < 0))"
+            },
+            {
+                "B": "(a ≤ 0) AND (b ≤ 0)"
+            },
+            {
+                "C": "(NOT (a > 0)) OR (NOT (b > 0))"
+            },
+            {
+                "D": "NOT ((a > 0) OR  (b < 0))"
+            }
+        ],
+        "code": "",
+        "index": 7
+    },
+    {
+        "question": "Let us consider algorithm s(n), where n  is a natural number (2 ≤ n  ≤ 10). The operator / denotes real division (ex. 3 / 2 = 1,5). Which of the following sums are returned by the algorithm? ",
+        "answers": [
+            {
+                "A": "∑1\n𝑘𝑘!𝑛𝑛\n𝑘𝑘=0"
+            },
+            {
+                "B": "∑1\n𝑘𝑘𝑛𝑛𝑘𝑘=0"
+            },
+            {
+                "C": "∑1\n𝑘𝑘!𝑛𝑛−1𝑘𝑘=0"
+            },
+            {
+                "D": "∑1\n𝑘𝑘!𝑛𝑛𝑘𝑘=1  4"
+            }
+        ],
+        "code": "Algorithm s(n):\n    p ← 1\n    x ← 0\n    For k = 0, n - 1 execute\n        p ← p * (k + 1)\n        x ← x + 1 / p\n    EndFor\n    return  x\nEndAlgorithm",
+        "index": 8
+    },
+    {
+        "question": " 9. Let us consider algorithm ceFace(n) , where n is a positive natural number (1 ≤  n ≤ 10000). Which of the following statements are true : ",
+        "answers": [
+            {
+                "A": "For n  = 125 the algorithm returns 521."
+            },
+            {
+                "B": "The algorithm ceFace(n)  returns the mirrored value of n."
+            },
+            {
+                "C": "For n  = 125 the algorithm returns 155."
+            },
+            {
+                "D": "For n  = 340 the algorithm returns 40."
+            }
+        ],
+        "code": "Algorithm ceFace(n):\nm ← 0\np ← 10\nWhile p < n execute\nr ← n MOD p\nm ← m + r\np ← p * 10\nEndWhile\nreturn m\nEndAlgorithm",
+        "index": 9
+    },
+    {
+        "question": "Let us consider algorithm f(v, n) , where n  is a non -zero natural number (1 ≤ n ≤ 10000) and v is an array with n positive natural numbers ( v[1], v[2], ..., v[n]). Assume that the algorithm  prim(d)  returns True  if d (natural number) is prime and False  otherwise. Which of the following statements are true? ",
+        "answers": [
+            {
+                "A": "The algorithm returns the number of distinct proper prime divisors of all numbers from array\nv."
+            },
+            {
+                "B": "The algorithm returns the product of the prime divisors of the numbers from array v."
+            },
+            {
+                "C": "The algorithm returns the number of prime numbers from array v ."
+            },
+            {
+                "D": "The algorit hm returns the total number of divisors of all the numbers from array v."
+            }
+        ],
+        "code": "Algorithm f(v, n):\n    x ← 1\n    a ← 0\n    For i ← 1, n execute\n        For d ← 2, (v[i] DIV 2) execute\n            If (prim(d) = True) AND (v[i] MOD d = 0) then\n                x ← x * d\n            EndIf\n        EndFor\n    EndFor\n    For d ← 2, (x DIV 2) execute\n        If (x MOD d = 0) AND (prim(d) = True) then\n            a ← a + 1\n        EndIf\n    EndFor\n    return a\nEndAlgorithm",
+        "index": 10
+    },
+    {
+        "question": "Let us consider algorithm f(n), where n  is a natural number ( 0 < n ≤ 109 at the initial call) . The local variable v is an array.   5 Which of the following statements are true? ",
+        "answers": [
+            {
+                "A": "The algorithm returns the greatest number that can be obtained using the digits of n."
+            },
+            {
+                "B": "The algorithm returns the greatest power of 10 that is a divisor of n ."
+            },
+            {
+                "C": "The algorithm returns the first (leftmost) digit of number n ."
+            },
+            {
+                "D": "The algorithm returns the sum of the digits of number n."
+            }
+        ],
+        "code": "Algorithm f(n):\nm ← 0\nWhile n > 0 execute\nm ← m + 1\nv[m] ← n MOD 10\nn ← n DIV 10\nEndWhile\nx ← 0\nmx ← 0\nWhile mx > -1 execute\nx ← x * 10 + mx\nmx ← -1\nj ← 1\nFor i = 1, m execute\nIf v[i] > mx then\nj ← i\nmx ← v[i]\nEndIf\nEndFor\nv[j] ← -1\nEndWhile\nreturn x\nEndAlgorithm",
+        "index": 11
+    },
+    {
+        "question": "Let us consider algorithm f(n), where parameter n  is a natural number (1  ≤ n ≤ 10002 at the initial call).   What is the returned value if the algorithm is called with n  = 103456? ",
+        "answers": [
+            {
+                "A": "639"
+            },
+            {
+                "B": "963"
+            },
+            {
+                "C": "693"
+            },
+            {
+                "D": "369"
+            }
+        ],
+        "code": "Algorithm f(n):\n    z ← 0; p ← 1;\n    While n ≠ 0 execute\n        c ← n MOD 10\n        n ← n DIV 10\n        If  c MOD 3 = 0 then\n            z ← z + p * (9 –  c)\n            p ← p * 10\n        EndIf\n    EndWhile\n    return  z\nEndAlgorithm",
+        "index": 12
+    },
+    {
+        "question": "Let us consider algorithm f(n) given in problem statement 12, but now parameter n is a natural number with two digits (10 ≤ n  ≤ 99 at the initial call ). Which of the following options contain only numbers for which the algorithm returns 3? ",
+        "answers": [
+            {
+                "A": "61, 65, 67"
+            },
+            {
+                "B": "62, 66, 68"
+            },
+            {
+                "C": "16, 56, 76"
+            },
+            {
+                "D": "26, 66, 86  6"
+            }
+        ],
+        "code": "",
+        "index": 13
+    },
+    {
+        "question": " 14. Let us consider algorithm ceFace(a, b) , where a and b are positive natural numbers  (1 ≤ a, b ≤ 10000). If a = 600, for what values of b will the execution of algorithm ceFace(a, b)  print 4 numbers: ",
+        "answers": [
+            {
+                "A": "b = 20"
+            },
+            {
+                "B": "b = 50"
+            },
+            {
+                "C": "b = 12"
+            },
+            {
+                "D": "b = 90"
+            }
+        ],
+        "code": "Algorithm ceFace(a, b):\nFor i ← 2, a, 2 execute\nIf a MOD i = 0 then\nIf  b MOD i = 0 then\nWrite i\nWrite new line\nEndIf\nEndIf\nEndFor\nEndAlgorithm",
+        "index": 14
+    },
+    {
+        "question": "Which of the following statements are true  about the algorithm in problem statement 14? ",
+        "answers": [
+            {
+                "A": "The algorithm prints the common divisors of a  and b."
+            },
+            {
+                "B": "The algorithm prints the common proper divisors of a and b."
+            },
+            {
+                "C": "The algorithm prints the common odd divisors of a and b."
+            },
+            {
+                "D": "The algorithm prints the common even divisors of a  and b."
+            }
+        ],
+        "code": "",
+        "index": 15
+    },
+    {
+        "question": "Let us consider a program that generates, in ascending order, all natural numbers containing exactly 5 distinct digits that can be formed using the digits: 2, 3, 4, 5, 6. Specify which number is generated immediately before the following sequence and whi ch number is generated immediately after the following sequence: 34256, 34265, 34526, 34562. ",
+        "answers": [
+            {
+                "A": "32645 and 34625"
+            },
+            {
+                "B": "32654 and 34655"
+            },
+            {
+                "C": "32654 and 34625"
+            },
+            {
+                "D": "32645 and 34655"
+            }
+        ],
+        "code": "",
+        "index": 16
+    },
+    {
+        "question": "Let array x = (1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, ...), which is continued according to the rule that can be observed from the elements that have been enumerated. Consider ing that the first element of the array is on position 1, which of the following sub sequences will contain only the value 11? ",
+        "answers": [
+            {
+                "A": "x[100], ..., x [109]"
+            },
+            {
+                "B": "x[113], ..., x [120]"
+            },
+            {
+                "C": "x[140], ..., x [152]"
+            },
+            {
+                "D": "x[123], ..., x [132]"
+            }
+        ],
+        "code": "",
+        "index": 17
+    },
+    {
+        "question": "How many of the first 100 elements of array x from problem statement 17 are prime numbers? ",
+        "answers": [
+            {
+                "A": "4"
+            },
+            {
+                "B": "34"
+            },
+            {
+                "C": "36"
+            },
+            {
+                "D": "30"
+            }
+        ],
+        "code": "",
+        "index": 18
+    },
+    {
+        "question": "Let us consider the natural numbers a and n (1 ≤ a, n ≤ 1000) , array V  with n natural numbers as elements ( V[1], V [2], ..., V [n]) and algorithms one(a, n, V)  and two(a, n, V) : Algorithm two(a, n, V):     p ← 1; i ← 1;     While i ≤ n execute         If  a > V[i] then             p ← p + 1         EndIf         i ← i + 1     EndWhile     return  p EndAlgorithm  What property should vector V have, such that, for any n  and V  with the given property, the two algorithms will return equal values for any value of a ? 7 ",
+        "answers": [
+            {
+                "A": "All elements of array V are equal."
+            },
+            {
+                "B": "All elements of array V  are distinct and sorted in ascending order."
+            },
+            {
+                "C": "All elements of array V  are distinct and sorted in descending order."
+            },
+            {
+                "D": "All elements o f array V  are sorted in ascending order but are not necessarily distinct."
+            }
+        ],
+        "code": "Algorithm one(a, n, V):\n    p ← 1; i ← 1;\n    While (i ≤ n) AND (a > V[p]) execute\n        p ← p + 1\n        i ← i + 1\n    EndWhile\n    return  p\nEndAlgorithm",
+        "index": 19
+    },
+    {
+        "question": "Let us consider algorithm suma(n)  where n  is a natural number (0 < n  ≤ 10000  at the initial call ). Which of the following statements are NOT  true? ",
+        "answers": [
+            {
+                "A": "The algorithm returns the value n  + 1"
+            },
+            {
+                "B": "The algorithm calculates and returns the sum of the proper divisors of n"
+            },
+            {
+                "C": "The call suma(1)  returns 2"
+            },
+            {
+                "D": "The algorithm calculates and returns the double of the integer part of the arithmetic mean of the\nfirst n  natural numbers"
+            }
+        ],
+        "code": "Algorithm suma(n):\nIf n = 0 then\nreturn 0\nelse\nreturn  suma(n - 1) + n DIV  (n + 1) + (n + 1) DIV n\nEndIf\nEndAlgorithm",
+        "index": 20
+    },
+    {
+        "question": "Consider the following algorithm , having as input parameters the natural numbers a and b (0 ≤  a, b ≤ 10000 at the initial call ): Which of the following statements are true? ",
+        "answers": [
+            {
+                "A": "The algorithm returns the sum of numbers a and b."
+            },
+            {
+                "B": "The algorithm returns the non- zero number x after the call ceFace(x, 0)  or ceFace(0, x) , and\nreturns 0 for the call ceFace(0, 0) ."
+            },
+            {
+                "C": "The algorithm returns the greatest common divisor of numbers a and b ."
+            },
+            {
+                "D": "The algorithm returns  a raised to the power b."
+            }
+        ],
+        "code": "Algorithm ceFace(a, b):\n    While a * b ≠ 0 execute\n        If  a > b then\n            return  ceFace(a MOD b, b)\n        else\n            return  ceFace(a, b MOD  a)\n        EndIf\n    EndWhile\n    return  a + b\nEndAlgorithm",
+        "index": 21
+    },
+    {
+        "question": "Let us consider algorithm afișare(n)  where n  is a natural number ( 1 ≤ n ≤ 109): 8 How many pairs of numbers will be displayed when executing the algorithm for n  = 7? ",
+        "answers": [
+            {
+                "A": "21"
+            },
+            {
+                "B": "15"
+            },
+            {
+                "C": "11"
+            },
+            {
+                "D": "17"
+            }
+        ],
+        "code": "Algorithm afișare(n):\nFor i = 1, n –  1 execute\nFor j = i + 1, n  execute\nIf  (j – i) < (n DIV 2) then\nWrite i, \" \", j –  i\nWrite new line\nelse\nIf  (j – i) ≠ (n DIV 2) then\nWrite j – i, \" \", i\nWrite new line\nEndIf\nEndIf\nEndFor\nEndFor\nEndAlgorithm",
+        "index": 22
+    },
+    {
+        "question": "C onsider ing the following code sequence, determine how many times the UBB character sequence will be printed, knowing that n  = 3k, where k is a natural number (1 ≤ k ≤ 30)? j ← n While j > 1 execute i ← 1 While i ≤ n execute i ← 3 * i Write 'UBB' EndWhile j ← j DIV 3 EndWhile   ",
+        "answers": [
+            {
+                "A": "k2"
+            },
+            {
+                "B": "k * 3k"
+            },
+            {
+                "C": "k * ( k+1)"
+            },
+            {
+                "D": "3 * k"
+            }
+        ],
+        "code": "",
+        "index": 23
+    },
+    {
+        "question": "Consider the following code sequences and the natural numbers i , j, a, b (1  < a, b ≤ 109). Sequence 1 (S1) i ← 1 While i ≠ b execute j ← 1 While j ≠ a execute Write '*' j ← j + 1 EndWhile i ← i + 1 EndWhile  Sequence 2 (S2) i ← 1 While i ≠ a execute j ← 1 While j ≠ b execute Write '*' j ← j + 1 EndWhile i ← i + 1 EndWhile Which of the following statements are true? ",
+        "answers": [
+            {
+                "A": "The number of characters printed by sequence S1 is different than the number of characters\nprinted by sequence S2."
+            },
+            {
+                "B": "Both sequences have the same time complexity."
+            },
+            {
+                "C": "The number of characters printed by sequence S1  is (a – 1) * ( b – 1)."
+            },
+            {
+                "D": "The number of characters printed by sequence S2  is a * b."
+            }
+        ],
+        "code": "",
+        "index": 24
+    },
+    {
+        "question": "Let us consider algorithm ceFace(nr) , where nr  is a natural number (100 ≤  nr ≤ 2*109 at the initial call). Algorithm ceFace(nr):     s ← 0     c1 ← nr MOD 10     nr ← nr DIV 10     c2 ← nr MOD 10     nr ← nr DIV 10     While nr ≠ 0 execute         c3 ← nr MOD 10         t ← c3 * 100 + c2 * 10 + c1         If  testProprietateNr(t) then             s ← s + c1 + c2 + c3         EndIf         c1 ← c2         c2 ← c3         nr ← nr DIV 10     EndWhile     return  s EndAlgorithm  9  What is the value returned by algorithm ceFace(nr)  for nr  = 1271211312? ",
+        "answers": [
+            {
+                "A": "31"
+            },
+            {
+                "B": "32"
+            },
+            {
+                "C": "33"
+            },
+            {
+                "D": "34"
+            }
+        ],
+        "code": "Algorithm testProprietateNr(n):\n    If n ≤ 1 then\n        return  False\n    EndIf\n    d ← 2\n    While d * d ≤ n execute\n        If  n MOD d = 0 then\n            return  False\n        EndIf\n        d ← d + 1\n    EndWhile\n    return  True\nEndAlgorithm",
+        "index": 25
+    },
+    {
+        "question": "Which of the following algorithms correctly determines and returns the square root of the natural number  n (0 < n < 105), rounded down to the nearest integer. The / o perator denotes real division (ex. 3 / 2 = 1,5). ",
+        "answers": [
+            {
+                "A": "Algorithm radical_A(n):\nx ← 0\nz ← 1\nWhile z ≤ n execute\nx ← x + 1\nz ← z + 2 * x\nz ← z + 1\nEndWhile\nreturn  x\nEndAlgorithm"
+            },
+            {
+                "C": "//The algorithm is called initially\n//as radical_C(n, n)\nAlgorithm radical_C(n, x):\n    eps ← 0.001\n    y ← 0.5 * (x + n / x)\n    If x - y < eps then\n        //return the integer part\n        //of x\n        return  [x]\n    EndIf\n    return  radical_C(n, y)\nEndAlgorithm"
+            },
+            {
+                "B": "Algorithm radical_B(n):\ns ← 1\nd ← n DIV 2\nWhile s < d execute\nk ← (s + d) DIV  2\nIf  k * k ≥ n then\nd ← k\nelse\ns ← k + 1\nEndIf\nEndWhile\nIf s * s ≤ n then\nreturn  s + 1\nelse\nreturn  s - 1\nEndIf\nEndAlgorithm"
+            },
+            {
+                "D": "Algorithm radical_D(n):\n    s ← 0\n    p ← 0\n    k ← 0\n    While k < n execute\n        k ← k + 3 + p\n        p ← p + 2\n        s ← s + 1\n    EndWhile\n    return  s\nEndAlgorithm"
+            }
+        ],
+        "code": "",
+        "index": 26
+    },
+    {
+        "question": "Know ing that x is a natural number, which of the following expressions are True  if and only if x is an even number that does NOT  belong to the open interval (10, 20)? ",
+        "answers": [
+            {
+                "A": "NOT((x > 10) AND (x < 20)) AND (NOT (x MOD 2 = 1))"
+            },
+            {
+                "B": "(x MOD 2 = 0) AND ((x < 10) OR  (x > 20))"
+            },
+            {
+                "C": "NOT(x MOD 2 = 1) AND ((x > 10) AND  (x < 20))"
+            },
+            {
+                "D": "NOT((x MOD 4 = 1) OR (x MOD 4 = 3) OR ((x > 10) AND (x < 20)))"
+            }
+        ],
+        "code": "",
+        "index": 27
+    },
+    {
+        "question": " 28. Consider an array a containing n distinct natural numbers ( a[1], a[2], …, a[ n], 2 ≤ n ≤ 1000 ) in strictly ascending order. In an array, a number that is strictly greater than both the number on the previous position and the number on the next position is called a local peak . The first and last elements of an array cannot be local peaks. An algorithm is required, named rearanjare(a, n) , that rearranges the numbers from the array such that it will contain the maximum number of local peaks and return the new array. The local variable b is an array. Which of the following algorithms are correct ?  10   ",
+        "answers": [
+            {
+                "A": "Algorithm rearanjare(a, n):\ni ← n\nFor p ← 2, n, 2 execute\nb[p] ← a[i]\ni ← i – 1\nEndFor\nFor p ← 1, n, 2 execute\nb[p] ← a[i]\ni ← i – 1\nEndFor\nreturn  b\nEndAlgorithm"
+            },
+            {
+                "B": "Algorithm rearanjare(a, n):\n    i ← n\n    For p ← 2, n, 2 execute\n        b[p] ← a[i]\n        i ← i – 1\n        b[p - 1] ← a[i]\n        i ← i – 1\n    EndFor\n    If n MOD 2 = 1 then\n        b[n] ← a[i]\n    EndIf\n    return  b\nEndAlgorithm"
+            },
+            {
+                "C": "Algorithm rearanjare(a, n):\ni ← n\nFor p ← 2, n, 2 execute\nb[p] ← a[i]\ni ← i – 1\nEndFor\ni ← 1\nFor p ← 1, n, 2 execute\nb[p] ← a[i]\ni ← i + 1\nEndFor\nreturn  b\nEndAlgorithm"
+            },
+            {
+                "D": "Algorithm rearanjare(a, n):\n    i ← n\n    For p ← 2, n, 3 execute\n        b[p] ← a[i]\n        i ← i – 1\n        b[p - 1] ← a[i]\n        i ← i – 1\n        If p + 1 ≤ n then\n            b[p + 1] ← a[i]\n            i ← i – 1\n        EndIf\n    EndFor\n    If n MOD 3 = 1 then\n        b[n] ← a[i]\n    EndIf\n    return b\nEndAlgorithm"
+            }
+        ],
+        "code": "",
+        "index": 28
+    },
+    {
+        "question": "Let us consider algorithm f(n, p1, p2) , where n, p1 and p2 are strictly positive natural numbers (1 < n, p1, p2 ≤ 104 at the initial call ). Which of the following statements are true? ",
+        "answers": [
+            {
+                "A": "If the three parameters have equal values ( n = p1 = p2), then the algorithm always returns the\nvalue 1."
+            },
+            {
+                "B": "If p1 = 5 and p2  = 5, the algorithm returns the number of 0 digits that the number n! contains\nat the end."
+            },
+            {
+                "C": "If p1 and p2  are equal and greater than 2, then the algorithm returns [log p1 n]."
+            },
+            {
+                "D": "None of the other three statements is true."
+            }
+        ],
+        "code": "Algorithm f(n, p1, p2):\nc ← 0\nWhile p1 ≤ n execute\nc ← c + n DIV p1\np1 ← p1 * p2\nEndWhile\nreturn c\nEndAlgorithm",
+        "index": 29
+    },
+    {
+        "question": "Which of the following algorithms returns the number of sumative  numbers found in interval [ a, b] (0 < a < b < 106)? A non- zero natural number n  is sumative  if n2 can be written as a sum of n  consecutive non-zero natural numbers. For example, 1 and 7 are sumative  because 1 = 1, respectively 49 = 4 + 5 + 6 + 7 + 8 + 9 + 10.  11 ",
+        "answers": [
+            {
+                "A": "Algorithm sumative(a, b):\n    k ← 0\n    For i ← a, b execute\n        If i MOD 2 ≠ 0 then\n            k ← k + 1\n        EndIf\n    EndFor\n    return k\nEndAlgorithm"
+            },
+            {
+                "B": "Algorithm sumative(a, b):\nreturn (b - a) DIV 2 + (b - a) MOD 2\n+ (a MOD 2 + b MOD 2) DIV 2\nEndAlgorithm"
+            },
+            {
+                "C": "Algorithm sumative(a, b):\n  k ← 0\n  For i ← a, b execute\n    i2 ← i * i\n    For j ← 2, i –  1 execute\n      If i2 = j * i + (i * (i + 1) DIV 2) then\n        k ← k + 1\n      EndIf\n    EndFor\n  EndFor\n  return k\nEndAlgorithm"
+            },
+            {
+                "D": "Algorithm sumative(a, b):\nk ← 0\nFor i ← a, b execute\ni2 ← i * i\nFor j ← 2, i DIV 2 execute\nIf i2 = j * i + (i * (i + 1) DIV 2) then\nk ← k + 1\nEndIf\nEndFor\nEndFor\nreturn k\nEndAlgorithm"
+            }
+        ],
+        "code": "",
+        "index": 30
+    }
+]

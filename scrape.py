@@ -12,18 +12,22 @@ class AdmitoParser:
         self.admito_parser = admito_parser.PdfParser()
         self.url = "https://www.cs.ubbcluj.ro/admitere/nivel-licenta/subiecte-din-anii-precedenti/"
         self.subjects_texts = []
-        self.subject_folder_names = []
+        self.sessions = []
 
     def merge_pdfs(self, _pdfs):
         mergeFile = PdfMerger()
 
         for i, _pdf in enumerate(_pdfs):
             if i == 1:
-                mergeFile.append(_pdf, pages=(0, 1))
+                mergeFile.append(_pdf, pages=(1, 2))
             else:
                 mergeFile.append(_pdf)
 
-        mergeFile.write("file.pdf")
+        # delete pdf from index 0
+        os.remove(_pdfs[0])
+
+        # write to new pdf
+        mergeFile.write(_pdfs[0])
 
     def download_and_parse(self):
         req = requests.get(self.url)
@@ -46,15 +50,25 @@ class AdmitoParser:
                 # skip, we handled this in the previous iteration
                 continue
 
+            if "romana" in url:
+                url = url.replace("romana", "engleza")
+
             # if url contains word 'RO' replace it with 'EN'
             if "RO" in url:
                 url = url.replace("RO", "EN")
 
-            # download current file
-            filename = url.split("/")[-1]
-            urllib.request.urlretrieve(url, filename)
+            # get session from url
+            session = url.split("/")[5]
 
-            self.subject_folder_names.append(filename)
+            if url.split("/")[6] == "concurs":
+                session += "-" + url.split("/")[6]
+            elif len(session) == 4:
+                session += "-" + url.split("/")[7]
+
+            filename = url.split("/")[-1]
+
+            # download file, saving each one in a new folder
+            urllib.request.urlretrieve(url, filename)
 
             # check if it has a pair of answers
             if "raspunsuri" in urls[i + 1] or "solutii" in urls[i + 1]:
@@ -62,30 +76,29 @@ class AdmitoParser:
                 filename2 = urls[i + 1].split("/")[-1]
                 urllib.request.urlretrieve(urls[i + 1], filename2)
 
+                # get the second page from the new pdf
                 self.merge_pdfs([filename, filename2])
+                os.remove(filename2)
 
-                text = self.admito_parser.parse_pdf("file.pdf")
-                parsed_questions = self.admito_parser.parse_text(text)
-                self.subjects_texts.append(parsed_questions)
+            parsed_questions = self.admito_parser.pdf_to_json(filename)
 
-                os.remove("file.pdf")
-            else:
-                text = self.admito_parser.parse_pdf(filename)
-                self.subjects_texts.append(text)
+            # replace each % 20 with a space
+            os.rename(filename, session + ".pdf")
 
-            # delete the file
-            os.remove(filename)
+            # create the folder if it doesn't exist
+            if not os.path.exists(session):
+                os.makedirs(session)
 
-        self.subjects_texts = json.dumps(
-            self.subjects_texts, indent=4, ensure_ascii=False)
+            # move the pdf to the folder
+            os.replace(session + ".pdf", session +
+                       "/" + session + ".pdf")
 
-    def save_to_json_file(self):
-        with open("questions.json", "w") as f:
-            f.write(self.subjects_texts)
+            # save the parsed questions to a json file
+            with open(session + "/" + session + ".json", "w") as f:
+                f.write(parsed_questions)
 
 
 # Usage example:
 if __name__ == "__main__":
     admito_parser = AdmitoParser()
     admito_parser.download_and_parse()
-    admito_parser.save_to_json_file()
