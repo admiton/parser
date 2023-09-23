@@ -1,0 +1,39 @@
+{
+  data: {
+      text: `Se consideră algoritmul **h(r, t)**, unde r este numărul de elemente dintr-un șir **(1 ≤ r ≤ 10)** și **t** este un șir format din **r** elemente care reprezintă codurile ASCII ale unor caractere **(32 ≤ t[i] ≤ 126, pentru i = 1, 2, ..., r)**.
+
+   Algoritmul de mai sus realizează o operație complexă asupra codurilor ASCII ale caracterelor din șir. Pentru care din următoarele șiruri de caractere algoritmul returnează o valoare mai mare decât **10^4**?`,
+      code: `\`\`\`plaintext
+   Algorithm h(r, t):
+    d ← 1
+    s ← 1
+    p ← 1
+    For i ← 1 To r execute
+      d ← ord(t[i])
+      For j ← 1 To i execute
+        p ← p * d
+      EndFor
+      s ← s + p
+    EndFor
+    return s
+   EndAlgorithm
+   \`\`\`
+   `,
+      explanation: `Algoritmul parcurge fiecare caracter al șirului, convertindu-l la codul său ASCII și apoi ridică la putere fiecare dintre aceste coduri în funcție de poziția lor în șir. Suma acestor puteri este apoi returnată. Astfel, șirurile cu caractere ale căror coduri ASCII ridicate la putere în funcție de poziție ar rezulta într-o sumă mai mare decât 10^4 sunt soluția corectă. În funcție de șirurile oferite ca opțiuni, doar "elloworld" și "abcdef" îndeplinesc această condiție.`,
+      answers: {
+        create: [
+          { text: '"elloworld"', isCorrect: true },
+          { text: '"Python"' },
+          { text: '"abcdef"', isCorrect: true },
+          { text: '"!@#"' },
+        ],
+      },
+      topics: {
+        create: {
+          topic: {
+            create: { name: "strings" },
+          },
+        },
+      },
+    },
+}

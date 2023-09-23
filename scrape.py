@@ -19,7 +19,7 @@ class AdmitoParser:
 
         for i, _pdf in enumerate(_pdfs):
             if i == 1:
-                mergeFile.append(_pdf, pages=(1, 2))
+                mergeFile.append(_pdf, pages=(0, 1))
             else:
                 mergeFile.append(_pdf)
 
@@ -49,13 +49,6 @@ class AdmitoParser:
             if "raspunsuri" in url or "solutii" in url:
                 # skip, we handled this in the previous iteration
                 continue
-
-            if "romana" in url:
-                url = url.replace("romana", "engleza")
-
-            # if url contains word 'RO' replace it with 'EN'
-            if "RO" in url:
-                url = url.replace("RO", "EN")
 
             # get session from url
             session = url.split("/")[5]

@@ -1,614 +1,472 @@
 [
     {
-        "question": "  Let us consider  the algorithm  magic(x) , where x is a natural number (1 ≤ x ≤ 32000). Which of the following statements are true? ",
-        "answers": [
-            {
-                "A": "For any input value x strictly less than 10 the algorithm  returns False ."
-            },
-            {
-                "B": "The algorithm  decomposes the number  x into its  prime factors ."
-            },
-            {
-                "C": "The algorithm  returns True  if the number  x is a perfect square ."
-            },
-            {
-                "D": "The algorithm  does not return True for any valid value of input parameter x."
-            }
-        ],
+        "text": "  Se consideră  algoritmul  magic(x) , unde  x este un număr  natural (1  ≤ x ≤ 32000). Precizați care dintre următoarele afirmații sunt adevărate: ",
         "code": "Algorithm magic(x):\n    st ← 1\n    dr ← x\n    While st ≤ dr execute\n        mj ← (st + dr) DIV 2\n        If mj * mj = x then\n            return True\n        EndIf\n        If mj * mj < x then\n            st ← mj + 1\n        else\n            dr ← mj – 1\n        EndIf\n    EndWhile\n    return False\nEndAlgorithm",
-        "correct_answers": "C",
-        "index": 1
-    },
-    {
-        "question": "  Let us consider the algorithm calculeaza(a,b) , where a and b are natural numbers (1 ≤ a, b ≤ 10000). Which of the following statements are true? ",
+        "explanation": "",
         "answers": [
             {
-                "A": "If a = 107 and b = 101, the algorithm returns the value 107."
+                "text": "\nPentru orice valoare de intrare x strict mai mică decât 10 a lgoritmul returnează False .\n"
             },
             {
-                "B": "If a = 1001 and b  = 101, the algorithm returns the value 1001."
+                "text": "\nAlgoritmul descompune numărul x în factorii săi primi.\n\n"
             },
             {
-                "C": "For all algorithm calls with 1 ≤ a ≤ 10000 and b = 101, the returned value is equal to a."
+                "text": "\nAlgoritmul returnează True dacă numărul x este pătrat perfect.\n",
+                "isCorrect": true
             },
             {
-                "D": "For all algorithm calls with a = 1001 and 1 ≤ b ≤ 10000, the returned value is equal to 1001."
+                "text": "\nAlgoritmul nu returnează True pentru nici o valoare validă a parametrului de intrare x."
             }
-        ],
-        "code": "Algorithm calculeaza (a, b):\nx ← 1\nFor i ← 1, b execute\nx ← (x MOD 10) * a\nEndFor\nreturn x\nEndAlgorithm",
-        "correct_answers": "ABD",
-        "index": 2
+        ]
     },
     {
-        "question": "Let us consider the algorithm afis(n) , where n is a natural number (0 ≤  n ≤  10000). Which of the following statements are true for the call afis(n) ? ",
+        "text": "  Se consideră algoritmul calculeaza(a,b) , unde a și b sunt numere naturale (1 ≤ a, b ≤ 10000). Precizați care dintre următoarele afirmații sunt adevărate: ",
+        "code": "Algorithm calculeaza (a, b):\n    x ← 1\n    For i ← 1, b execute\n        x ← (x MOD 10) * a\n    EndFor\n    return x\nEndAlgorithm",
+        "explanation": "",
         "answers": [
             {
-                "A": "The algorithm prints an array of numbers in which the first element is equal to the last element, the\nsecond element is equal to the second to last element, etc  (except for the middle elemen t)."
+                "text": "\nDacă a = 107 și b = 101, valoarea returnată este 107.\n\n"
             },
             {
-                "B": "The algorithm prints an array of even numbers."
+                "text": "\nDacă a = 1001 și b  = 101, valoarea returnată este 1001.\n\n"
             },
             {
-                "C": "The algorithm prints an array of numbers in ascending order followed by numbers in descending\norder."
+                "text": "\nPentru toate apelurile algoritmului cu 1 ≤ a ≤ 10000 și b = 101, valoarea returnată este valoarea\nlui a.\n\n",
+                "isCorrect": true
             },
             {
-                "D": "The algorithm prints an array of numbers in descending order followed by numbers in ascending\norder."
+                "text": "\nPentru toate apelurile algoritmului cu a = 100 1 și 1 ≤ b ≤ 10000, valoarea returnată este 1001."
             }
-        ],
-        "code": "Algorithm afis(n):\n    Write n, \" \"\n    If n > 0 then\n        afis(n DIV 2)\n        Write n, \", \"\n    EndIf\nEndAlgorithm",
-        "correct_answers": "AD",
-        "index": 3
+        ]
     },
     {
-        "question": "Let us consider the algorithm cauta(n, b), where n and b are natural number s (0 ≤ n ≤ 106, 2 ≤ b < 10). Which of the fol lowing statements are true? ",
+        "text": "Se consideră algoritmul afis(n) , unde n este un număr natural (0 ≤  n ≤  10000). Ce se va afișa la apelul afis(n) ? ",
+        "code": "Algorithm afis(n):\nWrite n, \" \"\nIf n > 0 then\nafis(n DIV 2)\nWrite n, \", \"\nEndIf\nEndAlgorithm",
+        "explanation": "",
         "answers": [
             {
-                "A": "The algorithm computes and returns the number of digits of n."
+                "text": "\nSe afișează un șir de numere în care primul element este egal cu ultimul, al doilea cu penultimul etc.\n(cu excepția elementului din mijloc ).\n",
+                "isCorrect": true
             },
             {
-                "B": "The algorithm returns 1 if the number n is a power of b and 0 otherwise."
+                "text": "\nSe afișează un șir de numere pare.\n"
             },
             {
-                "C": "The algorithm computes and returns the number of digits equal to 0 from the representation in\nbase b of number n."
+                "text": "\nSe afișează un șir de numere î n ordine crescătoare urmate de numere în ordine descrescătoare.\n",
+                "isCorrect": true
             },
             {
-                "D": "The a lgorithm returns 1 if number n ends in digit b and 0 otherwise."
+                "text": "\nSe afișează un șir de numere în ordine descrescătoare urmate de numere în ordine crescătoare.",
+                "isCorrect": true
             }
-        ],
-        "code": "Algorithm cauta(n, b):\nv ← 0\nIf n = 0 then\nreturn 1\nelse\nm ← n\nWhile m > 0 execute\nIf m MOD b = 0 then\nv ← v + 1\nEndIf\nm ← m DIV b\nEndWhile\nreturn v\nEndIf\nEndAlgorithm",
-        "correct_answers": "C",
-        "index": 4
+        ]
     },
     {
-        "question": "Let us consider  the algorithm  abc(a, n, p) , where n is a natural number (1 ≤ n ≤ 10000), p is an integer number (-10000 ≤ p ≤ 10000), and a is an array of  n non-zero natural numbers  (a[1], a[2], …, a[n]). Which of the following statements are true? ",
+        "text": "Se consideră algoritmul cauta(n, b), unde n și b sunt numere natural e (0 ≤ n ≤ 106, 2 ≤ b < 10) . Precizați care dintre următoarele afirmații sunt adevărate: ",
+        "code": "Algorithm cauta(n, b):\n    v ← 0\n    If n = 0 then\n        return 1\n    else\n        m ← n\n        While m > 0 execute\n            If m MOD b = 0 then\n                v ← v + 1\n            EndIf\n            m ← m DIV b\n        EndWhile\n        return v\n    EndIf\nEndAlgorithm",
+        "explanation": "",
         "answers": [
             {
-                "A": "The algorithm  returns 0 if and only if p is a negative number or is greater than n."
+                "text": "\nAlgoritmul determină și returnează  câte cifre are numărul n.\n\n"
             },
             {
-                "B": "The algorithm  returns  the element on position p if p is strictly greater than 0 and less than or\nequal to the length of the array ."
+                "text": "\nAlgoritmul returnează 1 dacă numărul n este o putere a lui b și 0 altfel.\n"
             },
             {
-                "C": "The algorithm  never returns  0 for parameter values that meet the given preconditions ."
+                "text": "\nAlgoritmul determină și returnează numărul de cifre 0 din reprezentarea în baza b a\nnumărului n.\n\n",
+                "isCorrect": true
             },
             {
-                "D": "The algorithm  returns  the element at position p if p is greater than or equal to 0 and strictly less\nthan the length of the array ."
+                "text": "\nAlgoritmul returnează 1 dacă numărul n se termină cu cifra b și 0 altfel."
             }
-        ],
-        "code": "Algorithm abc(a, n, p):\n    If n < 1 then\n        return -1\n    else\n        If (1 ≤ p) AND (p ≤ n) then\n            return a[p]\n        else\n            return 0\n        EndIf\n    EndIf\nEndAlgorithm",
-        "correct_answers": "B",
-        "index": 5
+        ]
     },
     {
-        "question": "In order to generate al the numbers with n digits composed  only of digits 0, 6, 7,  there is an algorithm which, for  n = 2, generates in ascending order the numbers 60, 66, 67, 70, 76, 77. If n = 4 and the same algorithm is used, what is the number generated immediately after the number 6767? ",
+        "text": "Se consideră algoritmul abc(a, n, p) , unde n este număr natural (1 ≤ n ≤ 10000), p este număr întreg (-10000 ≤ p ≤ 10000), iar a este un șir cu n numere naturale nenule ( a[1], a[2], …, a[n]). Precizați care dintre următoarele afirmații sunt adevărate: ",
+        "code": "Algorithm abc(a, n, p):\nIf n < 1 then\nreturn -1\nelse\nIf (1 ≤ p) AND (p ≤ n) then\nreturn a[p]\nelse\nreturn 0\nEndIf\nEndIf\nEndAlgorithm",
+        "explanation": "",
         "answers": [
             {
-                "A": "7667"
+                "text": "\nAlgoritmul returnează 0 dacă și numai dacă p este negativ sau mai mare decât n.\n"
             },
             {
-                "B": "6760"
+                "text": "\nAlgoritmul returnează elementul de pe poziția p dacă p este strict mai mare decât 0 și mai mic\nsau egal decât lungimea șirului.\n\n",
+                "isCorrect": true
             },
             {
-                "C": "6776"
+                "text": "\nAlgoritmul nu returnează niciodată 0 pentru valori ale parametrilor care respectă precondițiile\ndin enunț.\n"
             },
             {
-                "D": "None of the other variants are correct ."
+                "text": "\nAlgoritmul returnează elementul de pe poziția p dacă p este mai mare sau egal cu 0 și mai mic\nstrict decât lungimea șirului."
             }
-        ],
+        ]
+    },
+    {
+        "text": "Pentru a genera numerele cu n cifre formate doar din cifrele 0, 6, 7,  se utilizează un algoritm care, pentru n = 2, generează în ordine crescătoare numerele 60, 66, 67, 70, 76, 77. Dacă n = 4 și se utilizează același algoritm, care este numărul generat imediat după numărul 6767? ",
         "code": "",
-        "correct_answers": "D",
-        "index": 6
-    },
-    {
-        "question": "For a natural number nr (1000 ≤ nr ≤ 1000000), we define the decrement operation as follows: if the last digit of nr is not 0, we subtract 1 from nr, otherwise, we divide nr by 10 and we keep the integer part of the quotient. Which of the following algorithms,  for the call  decrementare(nr, k) ,  return the number obtained by applying the decrement operation k times (0 ≤ k ≤ 100) on the number nr? For example, for nr = 15243 and k = 10, the result will be 151. ",
+        "explanation": "",
         "answers": [
             {
-                "A": "Algorithm decrementare(nr, k):\nIf k = 0 then\nreturn nr\nelse\nIf nr MOD 10 ≠ 0 then\nreturn decrementare(nr - 1, k - 1)\nElse\nreturn decrementare(nr DIV 10, k - 1)\nEndIf\nEndIf\nEndAlgorithm"
+                "text": "\n7667\n"
             },
             {
-                "B": "Algorithm decrementare(nr, k):\n    While k > 0 execute\n        If nr MOD 10 = 0 then\n            nr ← nr DIV 10\n        else\n            nr ← nr - 1\n        EndIf\n  k ← k - 1\n    EndWhile\n    return nr\nEndAlgorithm"
+                "text": "\n6760\n",
+                "isCorrect": true
             },
             {
-                "C": "Algorithm decrementare(nr, k):\nFor i ← 1, k execute\nIf nr MOD 10 > 0 then\nnr ← nr DIV 10\nelse\nnr ← nr - 1\nEndIf\nEndFor\nreturn nr\nEndAlgorithm"
+                "text": "\n6776\n"
             },
             {
-                "D": "Algorithm decrementare(nr, k):\n    If k = 0 then\n        return nr\n    else\n        If k > nr MOD 10 then\n            nr1 ← nr DIV 10\n            return decrementare(nr1,   k - nr MOD 10 - 1)\n        else\n            return decrementare(nr - k, 0)\n        EndIf\n    EndIf\nEndAlgorithm"
+                "text": "\nNiciuna dintre celelalte variante",
+                "isCorrect": true
             }
-        ],
+        ]
+    },
+    {
+        "text": "Pentru un număr natural nr (1000 ≤ nr ≤ 1000000), definim operația de decrementare în modul următor: dacă ultima cifră a lui nr nu este 0, scădem 1 din nr, altfel, împărțim nr la 10 și păstrăm doar partea întreagă. Care dintre următorii algoritmi returnează, la apelul  decrementare(nr, k) ,  numărul obținut aplicând de k ori (0 ≤ k ≤ 100) operația de decrementare pe numărul nr? De exemplu, pentru nr = 15243 și k = 10, rezultatul este 151. ",
         "code": "",
-        "correct_answers": "ABD",
-        "index": 7
-    },
-    {
-        "question": "Let us consider the  algorithm fn with the following parameter specification: an array v with n natural numbers ( v[1], v[2], …, v[n]) and the integer number n (1 ≤ n ≤ 10000). Which of the following statements are true? ",
+        "explanation": "",
         "answers": [
             {
-                "A": "The algorithm returns the number of odd elements from vector v."
+                "text": "\nAlgorithm decrementare(nr, k):\n    If k = 0 then\n        return nr\n    else\n        If nr MOD 10 ≠ 0 then\n     return decrementare(nr - 1, k - 1)\n        Else\n            return decrementare(nr DIV 10, k - 1)\n        EndIf\n    EndIf\nEndAlgorithm\n\n\n"
             },
             {
-                "B": "The algorithm returns the number of elements from vector v that are powers of 2."
+                "text": "\nAlgorithm decrementare(nr, k):\nWhile k > 0 execute\nIf nr MOD 10 = 0 then\nnr ← nr DIV 10\nelse\nnr ← nr - 1\nEndIf\nk ← k - 1\nEndWhile\nreturn nr\nEnd Algorithm\n\n\n",
+                "isCorrect": true
             },
             {
-                "C": "The algorithm returns the number of elements from vector  v that contain only even digits."
+                "text": "\nAlgorithm decrementare(nr, k):\nFor i ← 1, k execute\nIf nr MOD 10 > 0 then\nnr ← nr DIV 10\nelse\nnr ← nr - 1\nEndIf\nEndFor\nreturn nr\nEndAlgorithm\n\n\n\n"
             },
             {
-                "D": "The algorithm returns the number of  elements  from  vector  v that contain only odd digi ts."
+                "text": "\nAlgorithm decrementare(nr, k):\n    If k = 0 then\n        return nr\n    else\n        If k > nr MOD 10 then\n            nr1 ← nr DIV 10\n            return decrementare(nr1,   k - nr MOD 10 - 1)\n        else\n            return decrementare(nr - k, 0)\n        EndIf\n    EndIf\nEndAlgorithm\n\n\nAlgoritmul de mai jos are ca parametri de intrare un vector v cu n numere naturale ( v[1], v[2], …,\nv[n]) și numărul întreg n (1 ≤ n ≤ 10000).\n\nAlgorithm fn(v, n):\n    a ← 0\n    For i ← 1, n execute\n        ok ← True\n        b ← v[i]\n        While (b ≠ 0) AND (ok = True) execute\n            If b MOD 2 = 1 then\n                ok ← False\n            EndIf\n            b ← b DIV 10\n        EndWhile\n        If ok = True then\n            a ← a + 1\n        EndIf\n    EndFor\n    return a\nEndAlgorithm\n\nPrecizați care dintre următoarele afirmații sunt adevărate:\n\n"
+            },
+            {
+                "text": "\nAlgoritmul returnează numărul elementelor impare din vectorul v.\n\n"
+            },
+            {
+                "text": "\nAlgoritmul returnează numărul elementelor din vectorul v care sunt puteri ale lui 2.\n",
+                "isCorrect": true
+            },
+            {
+                "text": "\nAlgoritmul returnează numărul elementelor din vectorul v care au în componența lor doar cifre pare.\n\n"
+            },
+            {
+                "text": "\nAlgoritmul returnează numărul elementelor din vectorul v care au în componența lor doar cifre\nimpare.\n\nAlgoritmul magic(s, n) are ca parametri de intrare un șir s cu n caractere ( s[1], s[2], …, s[n]) și\nnumărul întreg n (1 ≤ n ≤ 10000).\n\nAlgorithm magic(s, n):\n    i ← n\n    While 1 ≤ i execute\n        If s[i] ≠ s[n - i + 1] then\n            return 0\n        EndIf\n        i ← i - 1\n    EndWhile\n    return 1\nEndAlgorithm\n\nPrecizați care dintre următoarele afirmații sunt adevărate:\n\n"
+            },
+            {
+                "text": "\nAlgoritmul returnează 1 dacă s are un număr par de caractere.\n\n"
+            },
+            {
+                "text": "\nAlgoritmul returnează 1 dacă s este un palindrom.\n",
+                "isCorrect": true
+            },
+            {
+                "text": "\nAlgoritmul are o eroare deoarece expresia n – i + 1 poate avea valori negative în cursul\nexecuției.\n\n"
+            },
+            {
+                "text": "\nAlgoritmul returnează 1 dacă s conține doar caractere alfanumerice."
             }
-        ],
-        "code": "Algorithm fn(v, n):\na ← 0\nFor i ← 1, n execute\nok ← True\nb ← v[i]\nWhile (b ≠ 0) AND (ok = True) execute\nIf b MOD 2 = 1 then\nok ← False\nEndIf\nb ← b DIV 10\nEndWhile\nIf ok = True then\na ← a + 1\nEndIf\nEndFor\nreturn a\nEndAlgorithm",
-        "correct_answers": "C",
-        "index": 8
+        ]
     },
     {
-        "question": "  The algorithm  magic(s, n) has as input parameters an array s of n characters ( s[1], s[2], …, s[n]) and the integer number n (1 ≤ n ≤ 10000). Which of the following statements are true?   ",
-        "answers": [
-            {
-                "A": "The algorithm returns 1 if s has an even number of characters."
-            },
-            {
-                "B": "The algorithm returns 1 if s is a palindrome."
-            },
-            {
-                "C": "The algorithm contains an error since the expression n – i + 1 can have negative values during\nexecution."
-            },
-            {
-                "D": "The algorithm returns 1  if s contains only alphanumeric characters."
-            }
-        ],
-        "code": "Algorithm magic(s, n):\n    i ← n\n    While 1 ≤ i execute\n        If s[i] ≠ s[n - i + 1] then\n            return 0\n        EndIf\n        i ← i - 1\n    EndWhile\n    return 1\nEndAlgorithm",
-        "correct_answers": "B",
-        "index": 9
-    },
-    {
-        "question": "Let us consider the following sequence of pseudocode statements : Read a For i ← 1, a - 1 execute     For j ← i + 2, a execute         If i + j > a - 1 then             Write a, \" \", i, \" \", j             Write new line         EndIf     EndFor EndFor How many pairs of solutions will be printed after executing the pseudocode sequence for a = 9? ",
-        "answers": [
-            {
-                "A": "13"
-            },
-            {
-                "B": "15"
-            },
-            {
-                "C": "19"
-            },
-            {
-                "D": "None of the other variants are correct ."
-            }
-        ],
+        "text": "Se consideră următoarea secvență de cod în pseudocod:    Read a For i ← 1, a - 1 execute     For j ← i + 2, a execute         If i + j > a - 1 then             Write a, \" \", i, \" \", j             Write new line         EndIf     EndFor EndFor Câte perechi de soluții se vor afișa în urma execuției secvenței de cod pentru a = 9? ",
         "code": "",
-        "correct_answers": "C",
-        "index": 10
-    },
-    {
-        "question": " The a lgorit hm ceFace(n)  has as input parameter  a natural number  n (0 ≤ n ≤ 10000). What is the value returned by the call  ceFace(9876) ? ",
+        "explanation": "",
         "answers": [
             {
-                "A": "16"
+                "text": "\n13\n\n"
             },
             {
-                "B": "48"
+                "text": "\n15\n\n"
             },
             {
-                "C": "14"
+                "text": "\n19\n\n",
+                "isCorrect": true
             },
             {
-                "D": "63"
+                "text": "\nnici un ul din  celelalte  răspuns uri nu este corect\n\nAlgoritmul ceFace(n)  are ca parametru de intrare un număr natural n (0 ≤ n ≤ 10000).\n\n\nAlgorithm ceFace(n):\n    s ← 0\n    While n > 0 execute\n       c ← n MOD 10\n       If c MOD 2 = 0 then\n           s ← s + c\n       EndIf\n       n ← n DIV 10\n    EndWhile\n    return s\nEndAlgorithm\n\nCe va returna apelul  ceFace(9876) ?\n\n\n",
+                "isCorrect": true
+            },
+            {
+                "text": "\n16                    \n"
+            },
+            {
+                "text": "\n48                    \n"
+            },
+            {
+                "text": "\n14                    \n",
+                "isCorrect": true
+            },
+            {
+                "text": "\n63\n\nAlgoritmul generare(n)  prelucrează un număr natural n (0 < n < 100).\n\nAlgorithm generare(n):\n    nr ← 0\n    For i ← 1, 1801 execute\n        used[i] ← False\n    EndFor\n    While not  used[n] execute\n        sum ← 0\n        used[n] ← True\n        While n ≠ 0 execute\n            digit ← n MOD 10\n            n ← n DIV 10\n            sum ← sum + digit * digit * digit\n        EndWhile\n        n ← sum\n        nr ← nr + 1\n    EndWhile\n    return nr\nEndAlgorithm\n\n\n  Precizați care dintre următoarele afirmații sunt adevărate:\n\n\n",
+                "isCorrect": true
+            },
+            {
+                "text": "\nDacă n = 10, valoarea returnată este 2.  \n"
+            },
+            {
+                "text": "\nDacă n = 10, valoarea returnată este 1.\n\n"
+            },
+            {
+                "text": "\nDacă n = 3, valoarea returnată este 4.\n\n",
+                "isCorrect": true
+            },
+            {
+                "text": "\nCele două apeluri generare(3)  și generare(30)  vor returna aceeași valoare.",
+                "isCorrect": true
             }
-        ],
-        "code": "Algorithm ceFace(n):\ns ← 0\nWhile n > 0 execute\nc ← n MOD 10\nIf c MOD 2 = 0 then\ns ← s + c\nEndIf\nn ← n DIV 10\nEndWhile\nreturn s\nEndAlgorithm",
-        "correct_answers": "C",
-        "index": 11
+        ]
     },
     {
-        "question": "The algorithm generare(n)  processes a natural number n (0 < n < 100). Which of the following statements are true? ",
-        "answers": [
-            {
-                "A": "If n = 10, the algorithm returns 2."
-            },
-            {
-                "B": "If n = 10, the algorithm returns 1."
-            },
-            {
-                "C": "If n = 3, the algorithm returns 4."
-            },
-            {
-                "D": "The two calls generare(3)  and generare(30)  will return the same value."
-            }
-        ],
-        "code": "Algorithm generare(n):\n    nr ← 0\n    For i ← 1, 1801 execute\n        used[i] ← False\n    EndFor\n    While not  used[n] execute\n        sum ← 0\n        used[n] ← True\n        While n ≠ 0 execute\n            digit ← n MOD 10\n            n ← n DIV 10\n            sum ← sum + digit * digit * digit\n        EndWhile\n        n ← sum\n        nr ← nr + 1\n    EndWhile\n    return nr\nEndAlgorithm",
-        "correct_answers": "ACD",
-        "index": 12
-    },
-    {
-        "question": "The algorithm f(a, b) has as input parameter s two natural number s a and b (1 ≤ a < b ≤ 100 0): Unfortunately, the algorithm calls itself recursively an infinite number of times. State what will be the value of b when variable a becomes 0  for the first time . The algorithm is called using the instruction: c ← f(20, 10) ",
-        "answers": [
-            {
-                "A": "100"
-            },
-            {
-                "B": "160"
-            },
-            {
-                "C": "320"
-            },
-            {
-                "D": "640"
-            }
-        ],
+        "text": "Se dă algoritmul f(a, b ) care primește ca parametri două numere naturale a și b (1 ≤ a < b ≤ 1000): Din păcate, algoritmul se autoapelează de o infinitate de ori. Precizați care este valoarea pe care o va avea parametrul  b, atunci când parametrul  a devine 0  pentru prima dat ă. Algoritmul se apelează cu instrucțiunea: c ← f(20, 10) ",
         "code": "Algorithm f(a, b):\nIf a > 0 then\nreturn b + f(a DIV 2, b * 2)\nEndIf\nreturn b + f(a * 2, b DIV 2)\nEndAlgorithm",
-        "correct_answers": "C",
-        "index": 13
-    },
-    {
-        "question": "Which of the following expressions have the value true if and only if the natural number n is divisible by 3 and has the last digit 4 or 6: ",
+        "explanation": "",
         "answers": [
             {
-                "A": "(n MOD 3 = 0) OR ((n MOD 10 = 4) AND (n MOD 10 = 6))"
+                "text": "\n100\n\n",
+                "isCorrect": true
             },
             {
-                "B": "(n MOD 6 = 0) AND ((n MOD 10 = 4) OR (n MOD 10 = 6))"
+                "text": "\n160\n\n"
             },
             {
-                "C": "((n MOD 9 = 0) AND (n MOD 10 = 4)) OR ((n MOD 3 = 0) AND (n MOD 10 = 6))"
+                "text": "\n320\n\n",
+                "isCorrect": true
             },
             {
-                "D": "(n MOD 3 = 0) AND (((n MOD 2 = 0) AND (n MOD 5 = 0)) OR ((n MOD 2 = 0) AND (n MOD 5 = 1)))"
+                "text": "\n640"
             }
-        ],
+        ]
+    },
+    {
+        "text": "Precizați care dintre următoarele expresii are valoarea adevărat dacă și numai dacă numărul natural n este divizibil cu 3 și are ultima cifră 4 sau 6: ",
         "code": "",
-        "correct_answers": "B",
-        "index": 14
-    },
-    {
-        "question": "Let us consider the following logical expression  (X OR Z) AND (X OR Y). Choose the values for X, Y, Z such that the evaluation of the expression gives the result True: ",
+        "explanation": "",
         "answers": [
             {
-                "A": "X ← False; Y ← False; Z ← True;"
+                "text": "\n(n MOD 3 = 0) OR ((n MOD 10 = 4) AND (n MOD 10 = 6))\n\n"
             },
             {
-                "B": "X ← True; Y ← False; Z ← False;"
+                "text": "\n(n MOD 6 = 0) AND ((n MOD 10 = 4) OR (n MOD 10 = 6))\n\n",
+                "isCorrect": true
             },
             {
-                "C": "X ← False; Y ← True; Z ← False;"
+                "text": "\n((n MOD 9 = 0) AND (n MOD 10 = 4)) OR ((n MOD 3 = 0) AND (n MOD 10 = 6))\n\n"
             },
             {
-                "D": "X ← True; Y ← True; Z ← True;"
+                "text": "\n(n MOD 3 = 0) AND (((n MOD 2 = 0) AND (n MOD 5 = 0)) OR ((n MOD 2 = 0) AND (n MOD 5 = 1)))",
+                "isCorrect": true
             }
-        ],
+        ]
+    },
+    {
+        "text": "Se consideră următoarea expresie logică (X OR Z) AND (X OR Y). Alegeți valorile pentru X, Y, Z astfel încât evaluarea expresiei să dea rezultatul True: ",
         "code": "",
-        "correct_answers": "BD",
-        "index": 15
-    },
-    {
-        "question": "Consider all strings of length l ϵ {1, 2, 3} consisting of letters in the set { a, b, c, d, e}. How many of these strings have elements ordered  in strictly ascending  order  and also having an odd number of consonants? ( b, c and d are consonants) ",
+        "explanation": "",
         "answers": [
             {
-                "A": "14"
+                "text": "\nX ← False; Y ← False; Z ← True;\n\n",
+                "isCorrect": true
             },
             {
-                "B": "13"
+                "text": "\nX ← True; Y ← False; Z ← False;\n\n"
             },
             {
-                "C": "26"
+                "text": "\nX ← False; Y ← True; Z ← False;\n\n",
+                "isCorrect": true
             },
             {
-                "D": "81"
+                "text": "\nX ← True; Y ← True; Z ← True;"
             }
-        ],
+        ]
+    },
+    {
+        "text": "Se consideră toate șirurile de lungime l ϵ {1, 2, 3} formate din litere din mulțimea { a, b, c, d, e}. Câte dintre aceste șiruri au elementele ordonate strict c rescător (conform alfabetului) și un număr impar de consoane? ( b, c și d sunt consoane) ",
         "code": "",
-        "correct_answers": "B",
-        "index": 16
-    },
-    {
-        "question": " In order to display a square together with  its diagonals, we will use the characters * (asterisk) and . (dot) (for the space inside the square except the diagonals). The following example displays a square having a side of n = 6 asterisks. For this representation, 28 asterisks and 8 dots were required. * * * * * * * * . . * * * . * * . * * . * * . * * * . . * * * * * * * * Which of the following statements are true? ",
+        "explanation": "",
         "answers": [
             {
-                "A": "For n = 5, precisely 22 asterisks and 4 dots  are required ."
+                "text": "\n14\n\n",
+                "isCorrect": true
             },
             {
-                "B": "For n = 7, precisely 34 asterisks and 15 dots  are required ."
+                "text": "\n13\n\n"
             },
             {
-                "C": "For n = 7, precisely 33 asterisks and 16 dots  are required ."
+                "text": "\n26\n\n"
             },
             {
-                "D": "For n = 18, precisely 100 asterisks and 224 dots  are required ."
+                "text": "\n81",
+                "isCorrect": true
             }
-        ],
+        ]
+    },
+    {
+        "text": " Se dorește afișarea unui pătrat împreună cu diagonalele sale folosind doar caracterele * (asterisc) și . (punct) (pentru spațiul din interiorul pătratului cu excepția diagonalelor). Exemplul de mai jos ilustrează un pătrat având laturile de n = 6 asteriscu ri. Pentru acesta a fost necesară utilizarea a 28 asteriscuri și 8 puncte.  * * * * * * * * . . * * * . * * . * * . * * . * * * . . * * * * * * * * Care din afirmațiile de mai jos sunt adevărate? ",
         "code": "",
-        "correct_answers": "CD",
-        "index": 17
-    },
-    {
-        "question": "Let us consider the algorithm ceFace(T, n, e) , having as a parameter an array T of n natural numbers in ascending order ( T[1], T[2], …, T[n]) and natural numbers n and e (1 ≤ n, e ≤ 10000).     Which of the following statements are true? ",
+        "explanation": "",
         "answers": [
             {
-                "A": "The algorithm returns 0 if number e does not belong to the array T."
+                "text": "\nPentru n = 5, este nevoie de exact 22 asteriscuri și 4 puncte.\n\n",
+                "isCorrect": true
             },
             {
-                "B": "If the number e is odd and belongs to the array T, the algorithm returns the index of e in T using the\nbinary search algorithm."
+                "text": "\nPentru n =7, este nevoie de exact 34 asteriscuri și 15 puncte.\n\n"
             },
             {
-                "C": "If the number e is odd and belongs to the array T, the algorithm returns the index of e in T using the\nsequential search algorithm."
+                "text": "\nPentru n =7, este nevoie de exact 33 asteriscuri și 16 puncte.\n\n"
             },
             {
-                "D": "The algorithm returns the index of e in T."
+                "text": "\nPentru n =18, este nevoie de exact 100 asteriscuri și 224 puncte."
             }
-        ],
-        "code": "Algorithm ceFace(T,  n, e):\n    If e MOD 2 = 0 then\n        a ← 1\n        b ← n\n        While a ≤ b execute\n            m ← (a + b) DIV 2\n            If e < T[m] then\n                b ← m - 1\n            else\n                If e > T[m] then\n                    a ← m + 1\n                else\n                    return m\n                EndIf\n            EndIf\n        EndWhile\n        return 0\n    else\n        c ← 1\n        g ← 0\n        While (c ≤ n) AND (g = 0) execute\n            If e = T[c] then\n                g = c\n            EndIf\n            c ← c + 1\n        EndWhile\n        return g\n    EndIf\nEndAlgorithm",
-        "correct_answers": "AC",
-        "index": 18
+        ]
     },
     {
-        "question": " 19. Let us consider the algorithm calcul(x, n) , where the input parameters are the natural numbers n and x (1 ≤ x ≤ n < 10). Which of the following statements are true? ",
+        "text": "Se consideră algoritmul  ceFace(T, n, e) , care primește ca și parametru un șir T cu n numere naturale ordonate crescător ( T[1], T[2], …, T[n]) și numerele naturale n și e (1 ≤ n, e ≤ 10000). Precizați care dintre următoarele afirmații sunt adevărate: ",
+        "code": "Algorithm ceFace(T, n, e):\nIf e MOD 2 = 0 then\na ← 1\nb ← n\nWhile a ≤ b execute\nm ← (a + b) DIV 2\nIf e < T[m] then\nb ← m - 1\nelse\nIf e > T[m] then\na ← m + 1\nelse\nreturn m\nEndIf\nEndIf\nEndWhile\nreturn 0\nelse\nc ← 1\ng ← 0\nWhile (c ≤ n) AND (g = 0) execute\nIf e = T[c] then\ng = c\nEndIf\nc ← c + 1\nEndWhile\nreturn g\nEndIf\nEndAlgorithm",
+        "explanation": "",
         "answers": [
             {
-                "A": "If n = 5 and x = 2, the algorithm returns 20."
+                "text": "\nAlgoritmul returnează 0 dacă numărul e nu se află în șirul T.\n\n",
+                "isCorrect": true
             },
             {
-                "B": "If n = 3 and x = 2, the algorithm returns  5."
+                "text": "\nDacă numărul e este impar și se află în șirul T, algoritmul returnează poziția din șirul T pe care se\naflă e folosind algoritmul de căutare binară.\n\n"
             },
             {
-                "C": "The algorithm returns the cardinality of the set { 𝑐1𝑐2…𝑐𝑥  : ci ≠ cj ∀ 1 ≤ i, j ≤ x, i ≠ j, 1 ≤ ci ≤ n}"
+                "text": "\nDacă numărul e este impar și se află în șirul T, algoritmul returnează poziția din șirul T pe care se\naflă e folosind alg oritmul de căutare secvențială.\n"
             },
             {
-                "D": "The algorithm always returns a value strictly gr eater then 0."
+                "text": "\nAlgoritmul returnează poziția din șirul T pe care se află numărul e."
             }
-        ],
-        "code": "Algorithm calcul(x, n):\nb ← 1\nFor i ← 1, n - x execute\nb ← b + i\nEndFor\na ← b\nFor i ← n – x + 1, n execute\na ← a + i\nEndFor\nreturn a - b\nEndAlgorithm",
-        "correct_answers": "BD",
-        "index": 19
+        ]
     },
     {
-        "question": "Let us consider the algorithm s(a, b, c),  where a, b, c are positive natural numbers (1 ≤ a, b, c ≤ 10000). ",
-        "answers": [],
-        "code": "Algorithm s(a, b, c):\n    If (a = 1) OR (b = 1) OR (c = 1) then\n        return 1\n    else\n        If a > b then\n            return a * s(a - 1, b, c)\n         else\n             If a < b then\n                return b * s(a, b - 1, c)\n            else\n                return c * s(a - 1, b - 1, c - 1)\n            EndIf\n        EndIf\n    EndIf\nEndAlgorithm",
-        "correct_answers": "AC",
-        "index": 20
-    },
-    {
-        "question": "20a. Which of the following statements are true when  a = b and a < c? ",
+        "text": "Se consideră algoritmul calcul(x, n) , unde parametrii de intrare sunt numerele naturale n și x, având proprietatea  1 ≤ x ≤ n < 10. Precizați care dintre următoarele afirmații sunt adevărate: ",
+        "code": "Algorithm calcul(x, n):\n    b ← 1\n    For i ← 1, n - x execute\n        b ← b + i\n    EndFor\n    a ← b\n    For i ← n – x + 1, n execute\n        a ← a + i\n    EndFor\n    return a - b\nEndAlgorithm",
+        "explanation": "",
         "answers": [
             {
-                "A": "The algorithm computes and returns c! / (c - a)!"
+                "text": "\nDacă n = 5 și x = 2, atunci algoritmul returnează 20.\n\n"
             },
             {
-                "B": "The algorithm computes and returns  c! / (c – a + 1)!"
+                "text": "\nDacă n = 3 și x = 2, atunci algoritmul returnează 5.\n"
             },
             {
-                "C": "The algorithm computes and returns  c! / (c – a - 1)!"
+                "text": "\nAlgoritmul returnează  cardinalitatea mulțimii { 𝑐1𝑐2…𝑐𝑥  : ci ≠ cj ∀ 1 ≤ i, j ≤ x, i ≠ j,  1 ≤ ci ≤ n}\n\n",
+                "isCorrect": true
             },
             {
-                "D": "The algorithm computes and returns the number of combinations of c taken (a - 1) at a time"
+                "text": "\nAlgoritmul returnează întotdeauna o valoare strict mai mare decât 0."
             }
-        ],
+        ]
+    },
+    {
+        "text": "Se dă algoritmul s(a, b, c),  unde a, b, c sunt numere naturale pozitive (1 ≤ a, b, c ≤ 10000). ",
+        "code": "Algorithm s(a, b, c):\nIf (a = 1) OR (b = 1) OR (c = 1) then\nreturn 1\nelse\nIf a > b then\nreturn a * s(a - 1, b, c)\nelse\nIf a < b then\nreturn b * s(a, b - 1, c)\nelse\nreturn c * s(a - 1, b - 1, c - 1)\nEndIf\nEndIf\nEndIf\nEndAlgorithm",
+        "explanation": "",
+        "answers": []
+    },
+    {
+        "text": "20a. Precizați care dintre următoarele afirmații sunt adevărate în cazul în care a = b și a < c: ",
         "code": "",
-        "correct_answers": "AD",
-        "index": 21
-    },
-    {
-        "question": "20b. Given  a = 3, b = 4, c = 7, the algorit hm returns : ",
+        "explanation": "",
         "answers": [
             {
-                "A": "224"
+                "text": "\nAlgoritmul calculează și returnează c! / (c - a)!\n"
             },
             {
-                "B": "56"
+                "text": "\nAlgoritmul calculează și returnează c! / (c – a + 1)!\n\n"
             },
             {
-                "C": "336"
+                "text": "\nAlgoritmul calculează și returnează c! / (c – a - 1)!\n"
             },
             {
-                "D": "168"
+                "text": "\nAlgoritmul calculează și returnează combinări de c luate câte ( a - 1)",
+                "isCorrect": true
             }
-        ],
+        ]
+    },
+    {
+        "text": "20b. Pentru a = 3, b = 4, c = 7, algoritmul returnează: ",
         "code": "",
-        "correct_answers": "A",
-        "index": 22
-    },
-    {
-        "question": " Let us consider the algorithm  numere(a, b, c, d, e) , which receive s as input parameters five integer numbers  a, b, c, d and e (1 ≤ a, b ≤ 10000, 2 ≤ c ≤ 16, 1 ≤ d < c). Which of the following statements are true  when  calling numere(a, b, c, d, 0) ? ",
+        "explanation": "",
         "answers": [
             {
-                "A": "The algorithm returns True  if the representations in base c of the numbers a and b contain the\ndigit d occurring an equal number of times and False  otherwise"
+                "text": "\n224\n"
             },
             {
-                "B": "The algorithm  returns True if digit d occurs  in the base c representation of the number a and in\nthe base c representation of the number b, False  otherwise"
+                "text": "\n56\n",
+                "isCorrect": true
             },
             {
-                "C": "Calling numere(a, b, c, d, 0)  returns the same value as when calling numere(b, a, c, d, 0)"
+                "text": "\n336\n"
             },
             {
-                "D": "The algorithm  returns True if the digit d occurs on the same positions in the base c representation\nof the numbers a and b and False otherwise"
+                "text": "\n168"
             }
-        ],
-        "code": "Algorithm numere(a, b, c, d, e):\nIf a = 0 AND b = 0 then\nIf e = 0 then\nreturn True\nelse\nreturn False\nEndIf\nEndIf\nIf a MOD c = d then\ne = e + 1\nEndIf\nIf b MOD c = d then\ne = e – 1\nEndIf\nreturn numere(a DIV c, b DIV c, c, d, e)\nEndAlgorithm",
-        "correct_answers": "A",
-        "index": 23
+        ]
     },
     {
-        "question": "Let us consider the array s of natural numbers where: si = {𝑥,                       if 𝑖=1 𝑥+1,               if 𝑖=2 𝑠(𝑖−1)@𝑠(𝑖−2)  if 𝑖>2   , (i = 1, 2, ...). The operator @ concatenates the digits from the left and right operands, in this order (the digits of base 10 representation), and x is a natural number (1 ≤ x ≤ 99). For example, if x = 3, the array s is 3, 4, 43, 434, 43443, ... . For a na tural number k (1 ≤ k ≤ 30) state the number of digits of the item in  s that precedes the item having  k1 digits, where k1 is the lowest number where k ≤ k1 ≤ 30 and there exists an item having k1 digits. ",
+        "text": " Se consideră algoritmul  numere(a, b, c, d, e) , care primește ca parametri cinci numere întregi a, b, c, d și e (1 ≤ a, b ≤ 10000, 2 ≤ c ≤ 16, 1 ≤ d < c). Precizați care dintre următoarele afirmații sunt adevărate pentru apelul numere(a, b, c, d, 0)  : ",
+        "code": "Algorithm numere(a, b, c, d, e):\n    If a = 0 AND b = 0 then\n        If e = 0 then\n            return True\n        else\n            return False\n        EndIf\n    EndIf\n    If a MOD c = d then\n        e = e + 1\n    EndIf\n    If b MOD c = d then\n        e = e – 1\n    EndIf\n    return numere(a DIV c, b DIV c, c, d, e)\nEndAlgorithm",
+        "explanation": "",
         "answers": [
             {
-                "A": "for x = 15 and k = 8, the number of digits of the desired item is 6."
+                "text": "\nAlgoritmul returnează True dacă reprezentările în baza c a numerelor a și b conțin cifra d de\nnumăr egal de ori, False  în caz contrar\n\n"
             },
             {
-                "B": "for x = 2 și k = 6, the number of digits of the desired item is 6."
+                "text": "\nAlgoritmul returnează True dacă cifra d apare în reprezentarea în baza c a numărului a și în\nreprezentarea în baza c a numărului b, False  în caz contrar\n\n"
             },
             {
-                "C": "for x = 14 și k = 27, the number of digits of the desired item is 26."
+                "text": "\nApelul numere(a, b, c, d, 0)  returnează  aceeași valoare ca și apelul numere(b, a, c, d, 0)\n"
             },
             {
-                "D": "for x = 5 și k = 12, the number of digits of the desired item is 8."
+                "text": "\nAlgoritmul returnează True  dacă  cifra d apare pe aceleași poziții în reprezentarea în baza c a\nnumerelor a și b, False  în caz contrar",
+                "isCorrect": true
             }
-        ],
+        ]
+    },
+    {
+        "text": "Fie s un șir de numere naturale unde elementele si sunt de forma si = {𝑥,                       dacă 𝑖=1 𝑥+1,               dacă 𝑖=2 𝑠(𝑖−1)@𝑠(𝑖−2)  dacă 𝑖>2   , (i = 1, 2, ...). Operatorul @ concatenează cifrele operandului stâng cu cifrele operandului drept, în această ordine (cifre aferente reprezentării în baza 10), iar x este un număr natural (1 ≤ x ≤ 99). De exemplu, dacă x  = 3, șirul s va conține valorile 3, 4, 43, 434,  43443, ... . Pentru un numar natural k (1 ≤  k ≤ 30) precizați  numărul  cifrelor  acelui  termen  din șirul s care precede  termenul  format  din k1 cifre, unde k1 este cel mai mic număr cu proprietatea că k ≤ k1 ≤ 30 și există un termen format din k1 cifre. ",
         "code": "",
-        "correct_answers": "C",
-        "index": 24
-    },
-    {
-        "question": " Let us consider the following  recursive algorithm  fibonacci(n) , where n is a natural number (1 ≤ n ≤ 100).   Determine  the number of times that  the message  “Aici” is displayed for a call of  fibonacci(n ). ",
+        "explanation": "",
         "answers": [
             {
-                "A": "fibonacci(n)  number of times ."
+                "text": "\ndacă x = 15 și k = 8, numărul cifrelor termenului căutat este 6.\n"
             },
             {
-                "B": "fibonacci(n -1) number of times."
+                "text": "\n dacă x = 2 și k = 6, numărul cifrelor termenului căutat este 6.\n",
+                "isCorrect": true
             },
             {
-                "C": "fibonacci(n) -1 number of times."
+                "text": "\n dacă  x = 14 și k = 27, numărul cifrelor termenului căutat este 26.\n",
+                "isCorrect": true
             },
             {
-                "D": "fibonacci(n) - fibonacci(n -1) number of times."
+                "text": "\ndacă x = 5 și k = 12, numărul cifrelor termenului căutat este 8."
             }
-        ],
-        "code": "Algorithm fibonacci(n):\n    If n ≤ 1 then\n        Write \"Aici\"\n        return 1\n    else\n        return fibonacci(n  - 1) + fibonacci(n  - 2)\n    EndIf\nEndAlgorithm",
-        "index": 25
+        ]
     },
     {
-        "question": " 24.   Consider the expression : E(x) = a0 + a 1*x + a2*x2 + a3*x3 + a4*x4, where a0, a1, a2, a3, a4 and x are non-zero real numbers . The minimum number of multiplications needed to compute the value of the expression E(x) is: ",
+        "text": " Se consideră următorul algoritm recursiv fibonacci(n) , unde n este un număr natural (1 ≤ n ≤ 100).   Să se determine de câte ori se afișează mesajul “Aici ” în cazul unui apel fibonacci(n) .   ",
+        "code": "Algorithm fibonacci(n):\n    If n ≤ 1 then\n        Write \"Aici\"\n        return 1\n    else\n        return fibonacci(n - 1) + fibonacci(n - 2)\n    EndIf\nEndAlgorithm",
+        "explanation": "",
         "answers": [
             {
-                "A": "4"
+                "text": "\nDe fibonacci(n)  ori.\n\n",
+                "isCorrect": true
             },
             {
-                "B": "5"
+                "text": "\nDe fibonacci(n -1) ori.\n\n"
             },
             {
-                "C": "7"
+                "text": "\nDe fibonacci(n) -1 ori.\n\n"
             },
             {
-                "D": "3"
+                "text": "\nDe fibonacci(n) - fibonacci(n -1) ori.",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "index": 26
-    },
-    {
-        "question": "Let us consider the algorithm  f(x, n)  where x, n are natural numbers and x > 0. ",
-        "answers": [],
-        "code": "Algorithm f(x, n):\n2.      If n = 0 then\n3.          return 1\n4.      EndIf\n5.      m ← n DIV 2\n6.      p ← f(x, m)\n7.      If n MOD 2 = 0 then\n8.          return p * p\n9.      EndIf\n10.     return x * p * p\nEndAlgorithm",
-        "index": 27
-    },
-    {
-        "question": "25a. Which of the following statements are true? ",
-        "answers": [
-            {
-                "A": "The algorithm returns xn running approximately n recursive calls."
-            },
-            {
-                "B": "The algorithm returns xn making  approximately log 2 n recursive calls."
-            },
-            {
-                "C": "The algorithm returns xn if and only if n is a power of 2"
-            },
-            {
-                "D": "The algorithm returns xn if and only if n is even."
-            }
-        ],
-        "code": "",
-        "index": 28
-    },
-    {
-        "question": "25b. Let us consider line 10 replaced with: 10.     return x * f(x, n – 1) Which of the following statements are true? ",
-        "answers": [
-            {
-                "A": "The algorithm does not return xn anymore"
-            },
-            {
-                "B": "The algorithm returns xn+1"
-            },
-            {
-                "C": "The algorithm runs approximately n2 recursive calls."
-            },
-            {
-                "D": "The algorithm returns xn"
-            }
-        ],
-        "code": "",
-        "index": 29
-    },
-    {
-        "question": "Let us consider the algorithm f2(a,b)  having parameters a and b natural numbers, and the algorithm f(arr, i, n, p)  having as parameters the array arr with n integers ( arr[1], arr[2], …, arr[n]), and the integers i and p. Algorithm f(arr, i, n, p): If i = n then return 0 EndIf n1 ← f(arr, i + 1, n, p) n2 ← 0 If p + 1 ≠ i then n2 ← f(arr, i + 1, n, i) + arr[i] EndIf return f2(n1, n2) EndAlgorithm State which is the result of calling f(arr, 1, 9, -10), if the array arr has the values (10, 1, 5, 4, 7, 12, 1, 12, 6). ",
-        "answers": [
-            {
-                "A": "24"
-            },
-            {
-                "B": "37"
-            },
-            {
-                "C": "39"
-            },
-            {
-                "D": "56"
-            }
-        ],
-        "code": "Algorithm f2(a, b):\n    If a > b then\n        return a\n    else\n        return b\n    EndIf\nEndAlgorithm",
-        "index": 30
-    },
-    {
-        "question": "Let us consider the algorithm f(n), having as a parameter the nonzero natural number n which returns a natural number . ",
-        "answers": [],
-        "code": "Algorithm f(n):\n j ← n\n While j > 1 execute\n  i ← 1\n  While i ≤ n4 execute\n   i ← 4 * i\n   Write \"*\"\n  EndWhile\n  If j DIV 2 > 1 then\n   Write \" \"\n  EndIf\n  j ← j DIV 2\n EndWhile\n return j\nEndAlgorithm",
-        "index": 31
-    },
-    {
-        "question": "27a. The time complexity of the algorithm belongs to which of the following complexity class es? ",
-        "answers": [
-            {
-                "A": "O(log 2 n)"
-            },
-            {
-                "B": "O(log 22 𝒏)"
-            },
-            {
-                "C": "O(log 42 𝒏)"
-            },
-            {
-                "D": "O(log 2 log 4 n)"
-            }
-        ],
-        "code": "",
-        "index": 32
-    },
-    {
-        "question": "27b. Which of the following statements are true? ",
-        "answers": [
-            {
-                "A": "If n = 10, the algorithm displays groups of 7 asterisks, groups being separated by a space."
-            },
-            {
-                "B": "If n = 20, the algorithm displays  4 groups of asterisks  and 4 space characters."
-            },
-            {
-                "C": "If n = 25, the algorithm displays  48 asterisks , and after each group displays one spac e."
-            },
-            {
-                "D": "If n = 100, the algorithm displays  84 asterisks and  5 space characters."
-            }
-        ],
-        "code": "",
-        "index": 33
+        ]
     }
 ]

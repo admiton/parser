@@ -9,12 +9,12 @@ class PdfParser:
 
     def adjust_answer(self, line):
         # if the line starts with digits, followed by period, we remove the digits
-        if re.match(r"\d+", line):
-            line = re.sub(r"\d+ ", "", line)
+        if re.match(r"\d+.", line):
+            line = re.sub(r"\d+. ", "", line)
 
         # if the line contains points, we remove them, and also the digits
-        if re.search(r" points", line):
-            line = re.sub(r" points", "", line)
+        if re.search(r" 3 puncte", line):
+            line = re.sub(r"3 puncte", "", line)
 
         # remove all the (, ) groups
         line = re.sub(r", ", "", line)
@@ -42,9 +42,9 @@ class PdfParser:
 
         return line
 
-    def parse_question(self, text):
-        parsed_dict = {"question": "", "answers": [], "code": ""}
-
+    def parse_question(self, text, correct_answers):
+        parsed_dict = {"text": "",
+                       "code": "", "explanation": "", "answers": []}
         # extract the answers from the question
         answers_match = re.search(r"([A-D]\..*)", text, re.DOTALL)
         answers_text = answers_match.group(1).strip() if answers_match else ""
@@ -68,16 +68,19 @@ class PdfParser:
         # remove the question number
         text = re.sub(r"^\d+\. ?", "", text)
 
-        parsed_dict["question"] = text
+        parsed_dict["text"] = text
         parsed_dict["code"] = code_text
+        parsed_dict["explanation"] = ""
 
         # parsing answers
         answers_list = re.findall(
             r"([A-D])\.(.*?)(?=(?:[A-D]\.|$))", answers_text, re.DOTALL)
-        parsed_dict["answers"] = (
-            [{key: value.strip()}
-             for key, value in answers_list] if answers_list else []
-        )
+
+        for ans in answers_list:
+            obj = {"text": ans[1]}
+            if ans[0] in correct_answers:
+                obj["isCorrect"] = True
+            parsed_dict["answers"].append(obj)
 
         return parsed_dict
 
@@ -107,11 +110,7 @@ class PdfParser:
         category = 1
 
         for line in lines:
-            # if we find the word "UNIVERSITA", we skip (romanian version)
-            if re.search(r"UNIVERSITA", line.strip()):
-                break
-
-            if re.search(r"BAB", line.strip()):
+            if re.search(r"UNIVERS", line.strip()):
                 category ^= 1
 
             if category:
@@ -138,19 +137,18 @@ class PdfParser:
 
         for question in questions:
             if question.strip():
-                questions_properties = self.parse_question(question)
-                # add the correct answers to the question
-                if correct_answers:
-                    questions_properties["correct_answers"] = correct_answers.pop(
-                        0)
-                questions_properties["index"] = len(parsed_questions) + 1
-                parsed_questions.append(questions_properties)
+                if (correct_answers):
+                    questions_properties = self.parse_question(
+                        question, correct_answers[0])
+                    correct_answers.pop(0)
+                    parsed_questions.append(questions_properties)
 
         return parsed_questions
 
     def pdf_to_json(self, filename, pgs=40):
         text = self.parse_pdf(filename, pgs)
         parsed_questions = self.parse_text(text)
+
         parsed_questions = json.dumps(
             parsed_questions, indent=4, ensure_ascii=False)
         return parsed_questions
@@ -159,7 +157,7 @@ class PdfParser:
 # Usage example:
 if __name__ == "__main__":
     pdf_parser = PdfParser()
-    filename = "2022-iulie/2022-iulie.pdf"
+    filename = "2022-septembrie.pdf"
     parsed_questions = pdf_parser.pdf_to_json(filename)
 
     with open("questions.json", "w") as f:

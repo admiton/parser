@@ -1,611 +1,414 @@
 [
     {
-        "question": "Let us c onsider the following subalgorithm, with the input parameter the natural number n and that returns a natural number. Subalgorithm compute(n): E ← 1 P ← 1 i ← 2 While i ≤ n do P ← (-1) * P * i E ← E + P i ← i + 1 EndWhile return E EndSubalgorithm What is the value returned by the subalgorithm , considering that n ≥ 1? ",
+        "text": "Fie următorul subalgoritm, av ând ca parametru  de intrare numărul natural n și care returnează  un număr natural. Subalgoritm calcul(n) : E ← 1 P ← 1 i ← 2 CâtTimp i ≤ n execută P ← (-1) * P * i E ← E + P i ← i + 1 SfCâtTimp returnează E SfSubalgoritm Care este valoarea returnată de subalgoritm, în condi țiile în care n ≥ 1? ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "1! – 2! + 3! – 4! + ... + ( -1)n + 1 · n!"
+                "text": "\n1! – 2! + 3! – 4! + ... + ( -1)n + 1 · n!\n",
+                "isCorrect": true
             },
             {
-                "B": "1 – 1! + 2! – 3! + ... + ( -1)n · n!"
+                "text": "\n1 – 1! + 2! – 3! + ... + ( -1)n · n!\n"
             },
             {
-                "C": "1 – 1 · 2 + 1 · 2 · 3 – 1 · 2 · 3 · 4 + ... +  ( -1)n + 1 · 1 · 2 · ... · n"
+                "text": "\n1 – 1 · 2 + 1 · 2 · 3 – 1 · 2 · 3 · 4 + ... +  ( -1)n + 1 · 1 · 2 · ... · n\n",
+                "isCorrect": true
             },
             {
-                "D": "1 + 1 · 2 – 1 · 2 · 3 + 1 · 2 · 3 · 4 + ... + ( -1)n· 1· 2 · ... · n"
+                "text": "\n1 + 1 · 2 – 1 · 2 · 3 + 1 · 2 · 3 · 4 + ... + ( -1)n· 1· 2 · ... · n"
             }
-        ],
-        "code": "",
-        "correct_answers": "AC",
-        "index": 1
+        ]
     },
     {
-        "question": "An Excel file contains  n records, numbered from 1 to n. These records are copied into a Word file, where the records have to be arranged into r rows and c columns o n each page (excep t the first and the last page). The first page of the Word document has a header , therefore its number of rows is r1, r1 < r (the number of rows on the first page is smaller ). The records will be arranged into the Word file on each page starting from top to bottom on each column, the column s being filled in from left to right: if the first record on some page is numbered  i, then the record numbered  (i + 1) will be placed below it; the record numbered (i + r) will be th e first record on the column 2 on that page, and so on. Considering that n = 5000 , r = 46, r1 = 12 and c = 2, on what page and column of the Word document will the record having the order  number i = 3245  be placed ? ",
+        "text": "Un fi șier Excel con ține n înregistrări numerotate  de la 1 la n. Aceste înregistrări trebuie copiate într - un fi șier Word în care înregistrările se vor aranja în câte r rânduri și c coloane pe fiecare pagină  (cu excepția primei și ultimei pagini) .  Pe prima pagină a documentului Word, datorită prezen ței unui antet, numărul de rânduri este r1, r1 < r (numărul de rânduri prezent pe prima pagina este mai mic). Înregistrările vor fi aranjate în fi șierul Word pe fiecare pagină de sus în jos pe fiecare coloană, coloanele fiind completate de la stânga la dr eapta: dacă prima înregistrare de pe o pagină are numărul de ordine i, înregistrarea cu numărul de ordine (i + 1) va fi prezentă sub ea, iar înregistrarea cu numărul de ordine (i + r) va fi prima înregistrare de pe coloana 2 de pe pagina respectivă ș.a.m.d. Pentru n = 5000, r = 46, r1 = 12 și c = 2 pe ce pagină a documentului Word și pe ce coloană se va regăsi înregistrarea cu număr de ordine i = 3245? ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "Page 36, last column"
+                "text": "\nPagina 36, ultima coloană\n"
             },
             {
-                "B": "Page 37, first column"
+                "text": "\nPagina 37, prima coloană\n",
+                "isCorrect": true
             },
             {
-                "C": "Page 37, last column"
+                "text": "\nPagina 37, ultima coloană\n"
             },
             {
-                "D": "Page 38, first column"
+                "text": "\nPagina 38, prima coloană"
             }
-        ],
-        "code": "",
-        "correct_answers": "B",
-        "index": 2
+        ]
     },
     {
-        "question": "Let us consider the subalgorithm whatDoes ItDo(m), where  m is a natural number (10  ≤ m ≤ 10000). Subalgorithm whatDoesItDo (m): If m = 0 then return 0 EndIf If m MOD 9 = 0 then return 9 EndIf return m MOD 9 EndSubalgorithm 2 Which of the following statements are true? ",
+        "text": "Se consideră subalgoritmul ceFace(m) ,  unde  m este un număr  natural (10  ≤ m ≤ 10000). Subalgoritm ceFace(m) : Dacă m = 0 atunci returnează 0 SfDacă Dacă m MOD 9 = 0 atunci returnează  9 SfDacă returnează  m MOD 9 SfSubalgoritm  2 Preciza ți care dintre următoarele afirma ții sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "The subalgorithm returns the remainder of the division of number m by 9."
+                "text": "\nSubalgoritmul returnează restul împăr țirii numărului m la 9.\n"
             },
             {
-                "B": "The subalgorithm returns the number of divisors of number m that are divisible by  9."
+                "text": "\nSubalgoritmul returnează numărul divizorilor care sunt divizibili cu 9 ai numărului m.\n"
             },
             {
-                "C": "The subalgorithm return s the control digit of number m (the sum of its digits, then the digit\nsum of this sum, until the obtained sum is formed out of a single digit)."
+                "text": "\nSubalgoritmul returnează cifra de control a numărului m (suma cifrel or sale, apoi suma cifrelor\nacestei sume, până când suma ob ținută este un număr format dintr -o singură cifră).\n",
+                "isCorrect": true
             },
             {
-                "D": "The subalgorithm returns the control digit of number m (the sum of its digits, then the digit\nsum of this sum, until the obtained sum is formed out of a single digit) if and only if number\nm is divisible by 9."
+                "text": "\nSubalgoritmul returnează cifra de control a numărului m (suma cifrelor sale, apoi suma cifrelor\nacestei sume, până când suma ob ținută este un num ăr format dintr -o singură cifră) dacă și numai\ndacă numărul m este divizibil cu 9."
             }
-        ],
-        "code": "",
-        "correct_answers": "C",
-        "index": 3
+        ]
     },
     {
-        "question": "  In order to generate the numbers with n digits composed only of the digits 0, 2, 9,  one uses an algorithm which, for n = 2, generates in increasing order the numbers 20, 22, 29, 90, 92, 99 . If n = 4 and the same algorithm is used, which number is generated immediately after 2009 ? ",
+        "text": "Pentru a genera numerele cu n cifre formate doar din cifrele 0, 2, 9,  se utilizează un algoritm care, pentru n = 2, generează în ordine crescătoare numerele 20, 22, 29, 90, 92, 99. Dacă n = 4 și se utilizează același  algoritm, care este numărul generat imediat după numărul 2009 ? ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "2022"
+                "text": "\n2022\n"
             },
             {
-                "B": "2090"
+                "text": "\n2090\n"
             },
             {
-                "C": "2010"
+                "text": "\n2010\n"
             },
             {
-                "D": "None of the other choices"
+                "text": "\nNiciuna dintre celelalte variante",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "D",
-        "index": 4
+        ]
     },
     {
-        "question": "Let us consider the subalgorithm search(n) , where n is a natural number (0 ≤ n ≤ 1000000). Subalgorithm search(n): v ← 0 If n = 0 then return 1 else m ← n While m > 0 do If m MOD 10 = 0 then v ← v + 1 EndIf m ← m DIV 10 EndWhile return v EndIf EndSubalgorithm Which of the following statements are true? ",
+        "text": "Se consideră subalgoritmul cauta(n) , unde n este un număr natural (0 ≤ n ≤ 1000000). Subalgoritm cauta(n): v ← 0 Dacă n = 0 atunci returnează  1 altfel m ← n CâtTimp m > 0 execută Dacă m MOD 10 = 0 atunci v ← v + 1 SfDacă m ← m DIV 10 SfCâtTimp returnează  v SfDacă SfSubalgoritm Preciza ți care dintre următoarele afirma ții sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "The subalgorithm computes and returns the number of digits of n."
+                "text": "\nSubalgoritmul determină și returnează  c âte cifre are numărul n.\n"
             },
             {
-                "B": "The subalgorithm returns 1 if n is a power of 10 and 0 otherwise."
+                "text": "\nSubalgoritmul returnează 1 dacă numărul n este o putere a lui 10 și 0 altfel.\n"
             },
             {
-                "C": "The subalgorithm returns 1 if n’s last digit is 0 and 0 otherwise."
+                "text": "\nSubalgoritmul returnează 1 dacă numărul n se termină cu cifra 0 și 0 altfel.\n"
             },
             {
-                "D": "The subalgorithm computes and returns the number of digits 0 of n."
+                "text": "\nSubalgoritmul determină și returnează numărul de cifre 0 din numărul n.",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "D",
-        "index": 5
+        ]
     },
     {
-        "question": "Let us consider the subalgorithm abc(a, n, p) , where n is a natural number (1 ≤ n ≤ 10000), p is a whole  number ( -10000 ≤ p ≤ 10000) and a is an array of n non-zero natural numbers ( a[1], a[2], …, a[n]). Subalgorithm  abc(a, n, p): If n < 1 then return 0 else If (1 ≤ p) AND (p ≤ n) then return a[p] else return -1 EndIf EndIf EndSubalgorithm  3 Which of the following statements are true? ",
+        "text": "Se consideră subalgoritmul abc(a, n, p) , unde n este număr natural (1 ≤ n ≤ 10000), p este număr întreg ( -10000 ≤ p ≤ 10000), iar a este un șir cu n numere naturale nenule ( a[1], a[2], …, a[n]). Subalgoritm  abc(a, n, p) : Dacă n < 1 atunci returnează  0 altfel Dacă (1 ≤ p) ȘI (p ≤ n) atunci returnează  a[p] altfel returnează  -1 SfDacă SfDacă SfSubalgoritm  3 Preciza ți care dintre următoarele afirma ții sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "The subalgorithm returns -1 if and only if p is negative or greater than n."
+                "text": "\nSubalgoritmul returnează -1 dacă și numai dacă p este negativ sau mai mare decât n.\n"
             },
             {
-                "B": "The subalgorithm returns the element  at position p if p is strictly greater than 0 and less than\nor equal to the array’s length ."
+                "text": "\nSubalgoritmul returnează elementul de pe poziția p dacă p este strict mai mare decât 0 și mai\nmic sau egal decât lungimea șirului.\n",
+                "isCorrect": true
             },
             {
-                "C": "The subalgorithm never return s 0 for parameter values that meet the preconditions from the\nstatement."
+                "text": "\nSubalgoritmul nu returnează niciodată 0 p entru valori ale parametri lor care respectă\nprecondi țiile din enun ț.\n"
             },
             {
-                "D": "The subalgorithm returns the element at position p if p is greater than or equal to 0 and strictly\nsmaller  than the array’s length. In cas e p is not between 1 and n, the subalgorithm returns -1."
+                "text": "\nSubalgoritmul returnează elementul de pe poziția p dacă p este mai mare sau egal cu 0 și mai\nmic strict decât lungimea șirului. În cazul în care p nu este între 1 și n, returnează -1."
             }
-        ],
-        "code": "",
-        "correct_answers": "A",
-        "index": 6
+        ]
     },
     {
-        "question": "Which of the following sequences determines  in variable i the length of an array of characters that ends with character '*' (star)? The index of the first character is 1 and the star character is part of the character array. ",
+        "text": "Care dintre secven țele următoare determină în variabila i lungimea unui șir de caractere care se termină cu caracterul '*' (asterisc)? Primul caracter se află la indicele 1, iar caracterul asterisc este parte a șirului  de caractere . ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "i ← 1\nWhile x[i] ≠ '*' do\ni ← i + 1\nEndWhile"
+                "text": "\ni ← 1\nCâtTimp x[i] ≠ '*' execută\ni ← i + 1\nSfCâtTimp\n"
             },
             {
-                "B": "i ← 1\nWhile x[i] = '*' do\ni ← i + 1\nEndWhile\ni ← i - 1"
+                "text": "\ni ← 1\nCâtTimp x[i] = '*' execută\ni ← i + 1\nSfCâtTimp\ni ← i - 1\n",
+                "isCorrect": true
             },
             {
-                "C": "i ← 1\nWhile x[i] ≠ '*' do\ni ← i + 1\nEndWhile\ni ← i + 1"
+                "text": "\ni ← 1\nCâtTimp x[i] ≠ '*' execută\ni ← i + 1\nSfCâtTimp\ni ← i + 1\n"
             },
             {
-                "D": "i ← 1\nWhile x[i] ≠ '*' do\ni ← i + 1\nEndWhile\ni ← i - 1"
+                "text": "\ni ← 1\nCâtTimp x[i] ≠ '*' execută\ni ← i + 1\nSfCâtTimp\ni ← i - 1"
             }
-        ],
-        "code": "",
-        "correct_answers": "BC",
-        "index": 7
+        ]
     },
     {
-        "question": "Let us consider the following subalgorithm, with the input parameter the non -zero natural number n and which return s a natural number. Subalgorithm f(n): j ← n While j > 1 do i ← 1 While i ≤ n do i ← 2 * i EndWhile j ← j DIV 3 EndWhile return j EndSubalgorithm To which of the following complexity classes does the time complexity of the subalgorithm belong ? ",
+        "text": "Fie următorul subalgoritm, av ând ca parametru numărul natural nenul n și care returnează un număr natural . Subalgoritm f(n): j ← n CâtTimp j > 1 execută i ← 1 CâtTimp i ≤ n execută i ← 2 * i SfCâtTimp j ← j DIV 3 SfCâtTimp returnează j SfSubalgoritm În care dintre următoarele clase de complexitate se încadrează complexitatea timp a algoritmului ? ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "O(log 2 𝒏)"
+                "text": "\nO(log 2 𝒏)\n"
             },
             {
-                "B": "O(log 22 𝒏)"
+                "text": "\nO(log 22 𝒏)\n"
             },
             {
-                "C": "O(log 32 𝒏)"
+                "text": "\nO(log 32 𝒏)\n",
+                "isCorrect": true
             },
             {
-                "D": "O(log 2 log 3 n) 4"
+                "text": "\nO(log 2 log 3 n) 4",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "BC",
-        "index": 8
+        ]
     },
     {
-        "question": "The subalgorithm  howMany(n, m) has as input parameters the natural numbers n and m. Subalgorithm howMany(n, m): If n ≤ m then If (n MOD 2 = 0) AND (n MOD 3 ≠ 0) then return 1 + howMany(n + 1, m) else return howMany(n + 1, m) EndIf else return 0 EndIf EndSubalgorithm Which of the following statements are true? ",
+        "text": "Subalgoritmul  cate(n, m) prime ște ca parametri numerele naturale n și m. Subalgoritm cate(n, m): Dacă n ≤ m atunci Dacă (n MOD 2 = 0) ȘI (n MOD 3 ≠ 0) atunci returnează 1 + cate(n + 1, m) altfel returnează cate(n + 1, m) SfDacă altfel returnează 0 SfDacă SfSubalgoritm Preciza ți care dintre următoarele afirma ții sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "If n = 0 and m = 1, the subalgorithm returns the value 0."
+                "text": "\nDacă n = 0 și m = 1, subalgoritmul returnează valoarea 0.\n",
+                "isCorrect": true
             },
             {
-                "B": "If n = 4 and m = 21, the subalgorithm returns the value 6."
+                "text": "\nDacă n = 4 și m = 21, subalgoritmul returnează valoarea 6.\n"
             },
             {
-                "C": "If n = 7 and m = 120, the subalgorithm returns the value 36."
+                "text": "\nDacă n = 7 și m = 120, subalgoritmul returnează valoarea 36.\n",
+                "isCorrect": true
             },
             {
-                "D": "If n = 1 and m = 215, the subalgorithm returns the value 72."
+                "text": "\nDacă n = 1 și m = 215, subalgoritmul  returnează valoarea 72.",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "CD",
-        "index": 9
+        ]
     },
     {
-        "question": "Let us consider the subalgorithm verify(n) , where n is a natural number (1 ≤ n ≤ 100000). Subalgorithm verify(n): While n > 0 do If (n MOD 3) > 1 then return 0 EndIf n ← n DIV 3 EndWhile return 1 EndSubalgorithm Which of the following statements are true? ",
+        "text": "Se consideră subalgoritmul verifica(n) , unde n este un număr natural (1 ≤ n ≤ 100000). Subalgoritm verifica(n): CâtTimp n > 0 execută Dacă (n MOD 3) > 1 atunci returnează  0 SfDacă n ← n DIV 3 SfCâtTimp returnează  1 SfSubalgoritm Preciza ți care dintre următoarele afirma ții sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "The subalgorithm returns 1 if n is a power of 3 and 0, otherwise."
+                "text": "\nSubalgoritmul returnează 1 dacă n este o putere a lui 3, 0 în caz contrar.\n",
+                "isCorrect": true
             },
             {
-                "B": "The subalgorithm returns 1 if n’s representation  in base 3 contains  only the digits 0 and/or 1;\n0, otherwise."
+                "text": "\nSubalgoritmul  returnează 1 dacă scrierea în baza 3 a lui n conține doar cifrele 0 și/sau 1, 0 în\ncaz contrar.\n",
+                "isCorrect": true
             },
             {
-                "C": "The subalgorithm returns 1 if n can be written as a sum of distinct powers of 3 ; 0, otherwise."
+                "text": "\nSubalgoritmul returnează 1 dacă n poate fi scris ca sumă a puterilor distincte ale lui 3, 0 în caz\ncontrar.\n",
+                "isCorrect": true
             },
             {
-                "D": "The subalgorithm returns 1 if n’s representation in base  3 contains only the digit 2; 0,\notherwise."
+                "text": "\nSubalgoritmul returnează 1 dacă scrierea în baza 3 a lui n conține doar cifra 2, 0 în caz contrar.",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "C",
-        "index": 10
+        ]
     },
     {
-        "question": "For a natural number nr (1000 ≤ nr ≤ 1000000), the decrementation operation is defined as follows: if the last digit of nr is not 0, then we subtract 1 from nr, otherwise, we divide nr by 10 and keep the integer part of it. Which of the following  subalgorithms , when calling decrement(nr, k) , returns  the number obtained by applying  the decrementation operation  k times (0 ≤ k ≤ 100) on number nr? For example, for nr = 15243 and k = 10, the result is 151. ",
+        "text": "Pentru un număr natural nr (1000 ≤ nr ≤ 1000000), definim opera ția de decrementare în modul următor: dacă ultima cifră a lui nr nu este 0, scădem 1 din nr, altfel, împăr țim nr la 10 și păstrăm doar partea întreagă. Care dintre următorii subalgoritmi returnează, la apelul  decrementare(nr, k),  numărul ob ținut aplicând de k ori (0 ≤ k ≤ 100) opera ția de decrementare pe numărul nr? De exemplu, pentru nr = 15243 și k = 10, rezultatul este 151. ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "Subalgorithm  decrement(nr, k):\nIf k = 0 then\nreturn nr\nelse\nIf nr MOD 10 ≠ 0 then\nreturn decrement(nr DIV 10, k - 1)\nelse\nreturn decrement(nr - 1, k - 1)\nEndIf\nEndIf\nEndSubalgorithm\n5"
+                "text": "\nSubalgoritm  decrementare(nr, k) :\nDacă k = 0 atunci\nreturnează  nr\naltfel\nDacă nr MOD 10 ≠ 0 atunci\nreturnează  decrementare(nr DIV 10, k - 1)\naltfel\nreturnează  decrementare(nr - 1, k - 1)\nSfDacă\nSfDacă\nSfSubalgoritm  5\n"
             },
             {
-                "B": "Subalgorithm  decrement(nr, k):\nWhile k > 0 do\nIf nr MOD 10 = 0 then\nnr ← nr DIV 10\nelse\nnr ← nr - 1\nEndIf\nEndWhile\nreturn nr\nEndSubalgorithm"
+                "text": "\nSubalgoritm  decrementare(nr, k) :\nCâtTimp k > 0 execută\nDacă nr MOD 10 = 0 atunci\nnr ← nr DIV 10\naltfel\nnr ← nr - 1\nSfDacă\nSfCâtTimp\nreturnează  nr\nSfSubalgoritm\n\n",
+                "isCorrect": true
             },
             {
-                "C": "Subalgorithm  decrement(nr, k):\nFor i ← 1, k do\nIf nr MOD 10 > 0 then\nnr ← nr - 1\nelse\nnr ← nr DIV 10\nEndIf\nEndFor\nreturn nr\nEndSubalgorithm"
+                "text": "\nSubalgoritm  decrementare(nr, k) :\nPentru i ← 1, k execută\nDacă nr MOD 10 > 0 atunci\nnr ← nr - 1\naltfel\nnr ← nr DIV 10\nSfDacă\nSfPentru\nreturnează  nr\nSfSubalgoritm\n\n"
             },
             {
-                "D": "Subalgorithm  decrement(nr, k):\nIf k = 0 then\nreturn nr\nelse\nIf k > nr MOD 10 then\nnr1 ← nr DIV 10\nreturn decrement(nr1,   k - nr MOD 10 - 1)\nelse\nreturn decrement(nr - k, 0)\nEndIf\nEndIf\nEndSubalgorithm"
+                "text": "\nSubalgoritm  decrementare(nr, k) :\nDacă k = 0 atunci\nreturnează  nr\naltfel\nDacă k > nr MOD 10 atunci\nnr1 ← nr DIV 10\nreturnează  decrementare(nr1,   k - nr MOD 10 - 1)\naltfel\nreturnează  decrementare(nr - k, 0)\nSfDacă\nSfDacă\nSfSubalgoritm",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "D",
-        "index": 11
+        ]
     },
     {
-        "question": "Let us consider the following subalgorithm, with the input par ameters the array x with n natural numbers ( x[1], x[2], …, x[n]) and the whole  number n. Subalgorithm  f(x, n): If n = 1 then return 100 else If x[n] > f(x, n - 1) then return x[n] else return f(x, n - 1) EndIf EndIf EndSubalgorithm What is the result of executing the subalgorithm for x = [101, 7, 6, 3] and n = 4? ",
+        "text": "Se dă următorul subalgoritm care are ca parametri de intrare un șir x cu n numere naturale ( x[1], x[2], …, x[n]) și numărul întreg n. Subalgoritm  f(x, n): Dacă n = 1 atunci returneaz ă 100 altfel Dacă x[n] > f(x, n - 1) atunci returneaz ă x[n] altfel returnează  f(x, n - 1) SfDacă SfDacă SfSubalgoritm Care va fi rezultatul execu ției subalgoritmului pentru x = [101, 7, 6, 3] și n = 4? ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "101"
+                "text": "\n101\n"
             },
             {
-                "B": "3"
+                "text": "\n3\n"
             },
             {
-                "C": "100"
+                "text": "\n100\n",
+                "isCorrect": true
             },
             {
-                "D": "7\n6"
+                "text": "\n7 6"
             }
-        ],
-        "code": "",
-        "correct_answers": "ABCD",
-        "index": 12
+        ]
     },
     {
-        "question": "The following subalgorithm has as input param eters the array a with n natural numbers ( a[1], a[2], …, a[n]) and the natural number n (2 ≤ n ≤ 10000). Subalgorithm  h(a, n): If n ≤ 0 then return 0 EndIf If (n MOD 2 = 0) AND (a[n] MOD 2 = 0) then return h(a, n - 1) + a[n] EndIf return h(a, n - 1) - a[n] EndSubalgorithm Which of the following statements are true ? ",
+        "text": "Subalgoritmul de mai jos are ca parametri de intrare un șir a cu n numere naturale ( a[1], a[2], …, a[n]) și numărul natural n (2 ≤ n ≤ 10000). Subalgoritm  h(a, n): Dacă n ≤ 0 atunci returneaz ă 0 SfDacă Dacă (n MOD 2 = 0) ȘI (a[n] MOD 2 = 0) atunci returneaz ă h(a, n - 1) + a[n] SfDacă returneaz ă h(a, n - 1) - a[n] SfSubalgoritm Preciza ți care dintre următoarele afirma ții sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "The subalgorithm  returns the difference between the sum of elements having the same parity\nas their position and the sum of elements having different parity than their position in array a."
+                "text": "\nSubalgoritmul returnează diferen ța dintre suma elementelor care au aceea și paritate cu pozi ția\npe care se află și suma elementelor care au paritate diferită fa ță de pozi ția pe care se află din\nșirul a.\n"
             },
             {
-                "B": "The subalgorithm returns the difference between the sum of even elements on even positions\nand the sum of odd elements on odd positions of array a."
+                "text": "\nSubalgoritmul returnează diferen ța dintre suma elementelor pare de pe pozi țiile pare și suma\nelementelor impare de pe pozi țiile impare din șirul a.\n",
+                "isCorrect": true
             },
             {
-                "C": "The subalgorithm returns the difference between the sum of the even elements and the sum of\nthe odd elements of array a."
+                "text": "\nSubalgoritmul returnează diferen ța dintre suma elementelor pare și suma elementelor impare\ndin șirul a.\n"
             },
             {
-                "D": "The subalgorithm returns the difference between the sum of the even elements from even\npositions and the sum of the other elements of array a."
+                "text": "\nSubalgoritmul returnează diferen ța dintre suma elementelor pare de pe pozi ții pare și suma\ncelorlalte elemente din șirul a.",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "B",
-        "index": 13
+        ]
     },
     {
-        "question": "Let us consider the subalgorithm whatDoesItDo(n) , with the param eter n a non-zero natural number. Subalgorithm whatDoesItDo (n): i ← 1 While n > 0 do If n MOD 2 ≠ 0 then write i EndIf i ← i + 1 n ← n DIV 2 EndWhile EndSubalgorithm Which of the following statements are true? ",
+        "text": "Se consideră subalgoritmul ceFace(n) , cu parametrul n număr natural nenul . Subalgoritm ceFace(n): i ← 1 CâtTimp n > 0 execută Dacă n MOD 2 ≠ 0 atunci scrie i SfDacă i ← i + 1 n ← n DIV 2 SfCâtTimp SfSubalgoritm Preciza ți care dintre următoarele afirma ții sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "The subalgorithm prints the sequence: 12345 for n = 31."
+                "text": "\nSubalgoritmul afi șează secven ța: 12345  pentru n = 31.\n"
             },
             {
-                "B": "The subalgorithm prints the sequence: 234 for n = 14."
+                "text": "\nSubalgoritmul afi șează secven ța: 234 pentru n = 14.\n"
             },
             {
-                "C": "The subalgorithm prints 1 in the beginning of the se quence, when  n is an odd number."
+                "text": "\nSubalgoritmul afi șează 1 la începutul secven ței, pentru n impar.\n"
             },
             {
-                "D": "The subalgorithm prints a single number for n = 2k, where k is a natural number."
+                "text": "\nSubalgoritmul afi șează un singur număr pentru n = 2k , unde k este un număr natural.",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "B",
-        "index": 14
+        ]
     },
     {
-        "question": "Let us consider the set S, consisting of n intervals described by the lower boundary li and the upper boundary ui (li < ui ∀ i = 1... n). The subset S’ ⊆ S, consisting of m elements is built such that there are no two intervals in S’ that intersect one with another and m has the highest possible value. Which of the following strategies provide a correct solution for the problem? ",
+        "text": "Se dă o mul țime S, care con ține n intervale specificate prin capătul stâng si și capătul drept di (si < di ∀ i = 1... n). Se dore ște determinarea unei submul țimi S’ ⊆ S de m elemente, astfel încât să nu existe două intervale în S’ care se intersectează și m să aibă cea mai mare valoare posibilă. Care dintre următoarele strategii rezolvă corect problema? ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "The intervals from set S are ordered in ascen ding order based on their lower boundary. The\nfirst interval from the ordered array of intervals is added to S’. The ordered array is navigated\nfollowing the sorted order and if an interval that do es not intersect with the last interval added\nto S’ is found, then it will be added to S’."
+                "text": "\nSe sortează intervalele din mul țimea S crescător după capătul stâng. Se adaugă primul interval\ndin șirul sortat în S’. Se parcurg celelalte elemente din șir în ordinea sortată și când se întâlne ște\nun interval care nu se intersectează cu intervalul care a fost adăugat  ultima oară în S’, se adaugă\nși acesta în S’.\n"
             },
             {
-                "B": "The intervals from set S are ordered in ascending order based on their upper boundary. The\nfirst interval from the ordered array of intervals is added to S’. The order ed array is navigated\nfollowing  the sorted order  and if an interval that do es not intersect with the last interval added\nto S’ is found, then it will be added to S’.  7"
+                "text": "\nSe sortează intervalele din mul țimea S crescător după capătul drept. Se adaugă primul interval\ndin șirul sortat în S’. Se parcurg celelalte elemente din șir în ordinea sortată și când se întâlne ște\nun interval care nu se intersectează cu intervalul care a fost adăugat ultima oară în S’, se adaugă\nși acesta în S’. 7\n",
+                "isCorrect": true
             },
             {
-                "C": "The intervals from set S are ordered in ascending order based on their length. The first\ninterval from the ordered array of intervals is added to S’. The ordered array is navigated\nfollowing the sorted order and if an interval that do es not intersect with the last interval added\nto S’ is found, then it will be added to S’."
+                "text": "\n Se sortează intervalele din mul țimea S crescător după lungimea intervalului. Se adaugă primul\ninterval din șirul sortat în S’. Se parcu rg celelalte elemente din șir în ordinea sortată și când se\nîntâlne ște un interval care nu se intersectează cu intervalul care a fost adăugat ultima oară în S’,\nse adaugă și acesta în S’.\n"
             },
             {
-                "D": "The intervals from set S are ordered in ascending order based on the number of intervals from\nS they intersect with . The first interval from the ordered array of intervals is added to S’. The\nordered array is navigated following the sorted order and if an interval that do es not intersect\nwith the last interval added to S’ is found, then it will be added to S’."
+                "text": "\nSe sortează intervalele din mul țimea S crescător după numărul de int ervale din S cu care se\nintersectează. Se adaugă primul interval din șirul sortat în S’. Se parcurg celelalte elemente din\nșir în ordinea sortată și când se întâlne ște un interval care nu se intersectează cu intervalul care\na fost adăugat ultima oară în S’, se adaugă și acesta în S’.",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "CD",
-        "index": 15
+        ]
     },
     {
-        "question": "Let us consider the subalgorithm f(a, b) , with the input parameters two natural numbers a and b (1 ≤ a < b ≤ 1000). Subalgorithm  f(a, b): m ← 0 For n ← a, b do c ← 0 For d ← 1, n do If n MOD d = 0 then c ← c + 1 EndIf EndFor If c > m then m ← c EndIf EndFor For n ← a, b do c ← 0 For d ← 1, n do If n MOD d = 0 then c ← c + 1 EndIf EndFor If c = m then write n EndIf EndFor EndSubalgorithm Which of the following statements are true? ",
+        "text": "Se consideră subalgoritmul f(a, b) , care prime ște ca parametri două numere naturale  a și b (1 ≤ a < b ≤ 1000). Subalgoritm  f(a, b): m ← 0 Pentru n ← a, b execută c ← 0 Pentru d ← 1, n execută Dacă n MOD d = 0 atunci c ← c + 1 SfDacă SfPentru Dacă c > m atunci m ← c SfDacă SfPentru Pentru n ← a, b execută c ← 0 Pentru d ← 1, n execută Dacă n MOD d = 0 atunci c ← c + 1 SfDacă SfPentru Dacă c = m atunci scrie n SfDacă SfPentru SfSubalgoritm Preciza ți care dintre următoarele afirma ții sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "The subalgorithm prints the maximum between the number of divisors of a and the number of\ndivisors of b."
+                "text": "\nSubalgoritmul afi șează maximul dintre numărul de divizori ai lui a și numărul de divizori ai\nlui b.\n",
+                "isCorrect": true
             },
             {
-                "B": "The subalgorithm prints the natural numbers from interval [ a, b] that have the greatest number\nof divisors."
+                "text": "\nSubalgoritmul afi șează numerele naturale din intervalul [ a, b] care au proprietatea că au cel\nmai mare număr de divizori.\n"
             },
             {
-                "C": "The subalgorithm prints the number of divis ors for each natural number from interval [ a, b]."
+                "text": "\nSubalgoritmul afi șează numărul de divizori pentru fiecare număr natural din intervalul [ a, b].\n"
             },
             {
-                "D": "The subalgorithm prints the natural numbers from interval [ a, b] that have the greatest number\nof proper divisors."
+                "text": "\nSubalgoritmul afi șează numerele naturale din intervalul [ a, b] care au proprietatea că au cel\nmai mare număr de divizori proprii."
             }
-        ],
-        "code": "",
-        "correct_answers": "ACD",
-        "index": 16
+        ]
     },
     {
-        "question": "Let us consider the natural numbers a and b, where b ≠ 0. Which of the following alternatives comput es: • a DIV b, if a MOD b = 0 • (a / b)  rounded up to the next whole number, if a MOD b ≠ 0 ",
+        "text": "Fie numerele naturale a și b, cu b ≠ 0. Care dintre următoarele variante calculează: • a DIV b, dacă a MOD b = 0 • (a / b)  rotunjit în sus către cel mai apropiat întreg, dacă a MOD b ≠ 0 ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "(a - 1) DIV b"
+                "text": "\n(a - 1) DIV b\n"
             },
             {
-                "B": "(a + b + 1) DIV b"
+                "text": "\n(a + b + 1) DIV b\n",
+                "isCorrect": true
             },
             {
-                "C": "(a + b - 1) DIV b"
+                "text": "\n(a + b - 1) DIV b\n"
             },
             {
-                "D": "((a + 2 * b - 1) DIV b) - 1 8"
+                "text": "\n((a + 2 * b - 1) DIV b) - 1 8"
             }
-        ],
-        "code": "",
-        "correct_answers": "ABCD",
-        "index": 17
+        ]
     },
     {
-        "question": " Johnny has to implement the binary search algorithm of an element a in an array V of n (1 ≤ n ≤ 1000) whole numbers sorted in ascending order ( V[1], V[2], …, V[n]). He writes the following subalgorithm : Subalgorithm BinarySearch(a, n, V): st ← 1 dr ← n While dr – st > 1 execute m ← (st + dr) DIV 2 If a ≤ V[m] then dr ← m else st ← m EndIf EndWhile return dr EndSubalgorithm Which of the following statements are true? ",
+        "text": " Ionel trebuie să implementeze algoritmul de căutare binară a unui element a într-un șir V cu n (1 ≤ n ≤ 1000) numere întregi ordonate crescător ( V[1], V[2], …, V[n]). El scrie următorul   subalgoritm : Subalgoritm CautareBinara(a, n, V): st ← 1 dr ← n Câttimp dr – st > 1 execută m ← (st + dr) DIV 2 Dacă a ≤ V[m] atunci dr ← m altfel st ← m SfDacă SfCâttimp returnează  dr SfSubalgoritm Precizați care dintre următoarele afirmații sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "If n = 1 then the value returned by the subalgorithm is always 1."
+                "text": "\nDacă n = 1 atunci valoarea returnată de subalgoritm  este întotdeauna 1.\n"
             },
             {
-                "B": "For any n ≥ 1, the subalgorithm written by Johnny returns the value 1 when a is smaller than\nall the elements of the array."
+                "text": "\nPentru orice n ≥ 1, subalgoritmul scris de Ionel returnează valoarea 1 atunci când a este mai\nmic decât toate elementele din șir.\n"
             },
             {
-                "C": "When the element a exists in the array, the subalgorithm written by Johnny DOES NOT\nalways return the position (index from array V) at which the element  is located."
+                "text": "\nAtunci când elementul a apare în șir, subalgoritmul scris de Ionel NU returnează întotdeauna\npoziția (indicele în vectorul V) pe care acesta apare.\n"
             },
             {
-                "D": "For any n > 1, the subalgorithm written by Johnny returns the value n when a is greater than\nall the elements of the array."
+                "text": "\nPentru orice  n > 1, subalgoritmul scris de Ionel returnează valoarea n atunci când a este mai\nmare decât toate elementele din șir.",
+                "isCorrect": true
             }
-        ],
-        "code": "",
-        "correct_answers": "BD",
-        "index": 18
+        ]
     },
     {
-        "question": "Let us consider the subalgorithm compute(x, n) , where the input param eters are the natural numbers n and x, where 1 ≤ x ≤ n < 10. Subalgorithm compute(x, n): b ← 1 For i ← 1, n - x do b ← b * i EndFor a ← b For i ← n – x + 1, n do a ← a * i EndFor return a DIV b EndSubalgorithm Which of the following statements are true? ",
+        "text": "Se consideră subalgoritmul calcul(x, n) , unde parametrii de intrare sunt numerele naturale n și x, cu condi ția 1 ≤ x ≤ n < 10. Subalgoritm calcul(x, n) : b ← 1 Pentru i ← 1, n - x execută b ← b * i SfPentru a ← b Pentru i ← n – x + 1, n execută a ← a * i SfPentru returnează a DIV b SfSubalgoritm Preciza ți care dintre următoarele afirma ții sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "If n = 5 and x = 2, then the subalgorithm  returns 20."
+                "text": "\nDacă n = 5 și x = 2, atunci subalgoritmul returnează 20.\n"
             },
             {
-                "B": "If n = 3 and x = 2, then the subalgorithm returns 6."
+                "text": "\nDacă n = 3 și x = 2, atunci subalgoritmul returnează 6.\n",
+                "isCorrect": true
             },
             {
-                "C": "The subalgorithm returns the cardinal number of the set { 𝑐1𝑐2…𝑐𝑥  : ci ≠ cj ∀ 1 ≤ i, j ≤ x, i ≠ j,\n1 ≤ ci ≤ n}"
+                "text": "\nSubalgoritmul  returnează  cardinalitatea mulțimii { 𝑐1𝑐2…𝑐𝑥  : ci ≠ cj ∀ 1 ≤ i, j ≤ x, i ≠ j,  1 ≤ ci\n≤ n}\n",
+                "isCorrect": true
             },
             {
-                "D": "The subalgorithm executes n multiplication operations."
+                "text": "\nSubalgoritmul efectuează n opera ții de înmul țire."
             }
-        ],
-        "code": "",
-        "correct_answers": "C",
-        "index": 19
+        ]
     },
     {
-        "question": "Let us consider subalgorithm what(n,k) , which receives as parameters two non -zero natural numbers n and k (1 ≤ n, k ≤ 1000000). 9 Subalgorithm what(n, k): While n ≥ 1 execute If k ≤ n then i ← k else i ← n EndIf n ← n - i x ← 1 While i ≥ 1 execute Write x,’ ’ x ← x + 1 i ← i - 1 EndWhile EndWhile EndSubalgorithm Which of the following statements are true? ",
+        "text": "Se consideră subalgoritmul  ceFace(n,k) , care primește ca și parametru două numere naturale nenule n și k (1 ≤ n, k ≤ 100 0000). Subalgoritm ceFace(n, k): Câttimp n ≥ 1 execută Dacă k ≤ n atunci i ← k altfel i ← n SfDacă  9 n ← n - i x ← 1 Câttimp i ≥ 1 execută Scrie x,’ ’ x ← x + 1 i ← i - 1 SfCâttimp SfCâttimp SfSubalgoritm Precizați care dintre următoarele afirmații sunt adevărate: ",
+        "code": "",
+        "explanation": "",
         "answers": [
             {
-                "A": "For n = 8 and k = 3 the subalgorithm prints the array 1 2 3 1 2 3 1 2"
+                "text": "\nPentru n = 8 și k = 3 subalgoritmul afișează  șirul 1 2 3 1 2 3 1 2\n"
             },
             {
-                "B": "For k = 2, the smallest value of n for which the value 1 is printed 3 times is n = 3."
+                "text": "\nPentru k = 2, cea mai mică valoare a lui n pentru care se afișează de 3 ori valoarea 1 pe ecran\neste n = 3.\n",
+                "isCorrect": true
             },
             {
-                "C": "For k = 5, the smallest value of n for which the value 2 is printed 37 times is n = 182 ."
+                "text": "\nPentru k = 5, cea mai mică valoare a lui n pentru care se afișează de 37 ori valoarea 2 pe ecran\neste n = 182 .\n",
+                "isCorrect": true
             },
             {
-                "D": "For n = 7 and k = 3 the subalgorithm prints 1 2 3 1 2 3"
+                "text": "\nPentru n = 7 și k = 3 subalgoritmul afișează 1 2 3 1 2 3"
             }
-        ],
-        "code": "",
-        "correct_answers": "BD",
-        "index": 20
-    },
-    {
-        "question": "Let us consider the subalgorithm compute(a, b, c) , with input parameters non -zero natural numbers, that computes the greatest common divisor of the three given numbers. Which of the following implementations  for the subalgorithm  are correct? ",
-        "answers": [
-            {
-                "A": "Subalgorithm  compute(a, b, c):\nWhile (a ≠ b) OR (a ≠ c) OR (b ≠ c) do\nx ← a\nIf a ≠ x then\na ← a - x\nEndIf\nIf b ≠ x then\nb ← b - x\nEndIf\nIf c ≠ x then\nc ← c - x\nEndIf\nEndWhile\nreturn x\nEndSubalgorithm"
-            },
-            {
-                "B": "Subalgorithm  compute(a, b, c):\nx ← a\ny ← b\nWhile x ≠ y do\nIf x > y then\nx ← x - y\nelse\ny ← y - x\nEndIf\nEndWhile\nz ← c\nWhile x ≠ z do\nIf x > z then\nx ← x - z\nelse\nz ← z - x\nEndIf\nEndWhile\nreturn x\nEndSubalgorithm  10"
-            },
-            {
-                "C": "Subalgorithm  compute(a, b, c):\nWhile (a ≠ b) OR (a ≠ c) OR (b ≠ c) do\nx ← a\nIf b < x then\nx ← b\nEndIf\nIf c < x then\nx ← c\nEndIf\nIf a ≠ x then\na ← a - x\nEndIf\nIf b ≠ x then\nb ← b - x\nEndIf\nIf c ≠ x then\nc ← c - x\nEndIf\nEndWhile\nreturn x\nEndSubalgorithm"
-            },
-            {
-                "D": "Subalgorithm  compute(a, b, c):\nx ← a\ny ← b\nr ← x MOD y\nWhile r ≠ 0 do\nx ← y\ny ← r\nr ← x MOD y\nEndWhile\nz ← c\nr ← y MOD z\nWhile r ≠ 0 do\ny ← z\nz ← r\nr ← y MOD z\nEndWhile\nreturn z\nEndSubalgorithm"
-            }
-        ],
-        "code": "",
-        "correct_answers": "D",
-        "index": 21
-    },
-    {
-        "question": "The subalgorithm whatDoesItDo(n)  has as input parameter the natural number n (1 ≤ n ≤ 100). Subalgorithm  whatDoesItDo (n): s ← 0 If n MOD 2 = 0 then a ← 1 While a < n do s ← s + a a ← a + 2 EndWhile else b ← 2 While b < n do s ← s + b b ← b + 2 EndWhile EndIf return s EndSubalgorithm  11 Which of the  following statements are true? ",
-        "answers": [
-            {
-                "A": "If n is even, the subalgorithm returns the sum of the natural numbers strictly smaller than n; if\nn is odd, it returns the sum of the even natural numbers smaller than n."
-            },
-            {
-                "B": "If n is even, the subalgorithm  returns the sum of the even natural numbers strictly smaller\nthan n; if n is odd, it returns the sum of the odd natural numbers smaller than n."
-            },
-            {
-                "C": "If n is even, the subalgorithm returns the sum of the odd natural numbers smaller than n; if n\nis odd, it returns the sum of the even natural numbers smaller than n."
-            },
-            {
-                "D": "If n is even, the subalgorithm returns the sum of the even natural numbers strictly smaller\nthan n; if n is odd, it returns the sum of the natural numbers strictly smaller than n."
-            }
-        ],
-        "code": "",
-        "correct_answers": "BD",
-        "index": 22
-    },
-    {
-        "question": "The subalgorithm whatDoesItDo(a)  has the input parameter the natural number a (1 ≤ a ≤ 100000). Subalgorithm whatDoesItDo (a): b ← 0 c ← 0 d ← 0 e ← 1 While a > 0 do d ← a MOD 10 If (d ≠ 4) AND (d < 7) then b ← b + e * (d DIV 2) c ← c + e * (d - d DIV 2) else b ← b + e c ← c + e * (d - 1) EndIf a ← a DIV 10 e ← e * 10 EndWhile write b write c EndSubalgorithm Which of the following pair s of values will never be printed for any valid input  values ? ",
-        "answers": [
-            {
-                "A": "1112 and 11233"
-            },
-            {
-                "B": "1111 and 88888"
-            },
-            {
-                "C": "21001 and 33011"
-            },
-            {
-                "D": "3141 and 3258"
-            }
-        ],
-        "code": "",
-        "correct_answers": "A",
-        "index": 23
-    },
-    {
-        "question": "Let us consider the subalgorithms f(n, c)  and g(n, c) , having the input parame ters the natural numbers n and c. Subalgorithm f(n, c): If n ≤ 9 then If n = c then return 1 else return 0 EndIf else If n MOD 10 = c then return f(n DIV 10, c) + 1 else return f(n DIV 10, c) EndIf EndIf EndSubalgorithm  12 Subalgorithm g(n, c): If c = 0 then return 0 else If f(n, c) > 0 then return g(n, c - 1) + 1 else return g(n, c - 1) EndIf EndIf EndSubalgorithm What is the result of the call g(n, 9) ? ",
-        "answers": [
-            {
-                "A": "It returns the number of digits of number n."
-            },
-            {
-                "B": "It returns the number of distinct digits of number n."
-            },
-            {
-                "C": "It returns the number of digits greater than 1 of number n."
-            },
-            {
-                "D": "None of the other  answer s are correct."
-            }
-        ],
-        "code": "",
-        "correct_answers": "B",
-        "index": 24
-    },
-    {
-        "question": " On a site each registered user has a secret code of n digits instead of a password. For logging i n, the user does not have to introduce the entire code, instead the site randomly generates 3 distinct positions  p1, p2 and p3, such that 1 ≤ p1 < p2 < p3 ≤ n and the user only has to introduce the digits from those positions. For example, if the user’s co de is 987654321 and the site randomly generates the positions 2, 5 and 7, the user has to introduce the digits 8, 5, 3. Below, the values introduced by a user for 9 logins are given. 1, 2, 3 2, 9, 0 6, 3, 2 2, 0, 2 1, 4, 7 9, 3, 2 4, 4, 3 4, 3, 1 5, 6, 0 Assuming that all 9 logins are valid and the user code was not changed in the meantime, which of the below statements are correct. ",
-        "answers": [
-            {
-                "A": "The user code surely does not contain the digit 8."
-            },
-            {
-                "B": "The shortest possible code has 12 digits."
-            },
-            {
-                "C": "The shortest possible code contains the digit 2 at least 3 times."
-            },
-            {
-                "D": "The sum of the digits in the shortest possible code may be 44."
-            }
-        ],
-        "code": "",
-        "correct_answers": "D",
-        "index": 25
-    },
-    {
-        "question": "Let us consider the subalgorithm  f(x, n)  where x, n are natural numbers and x > 0. Subalgorithm  f(x, n): If n = 0 then return 1 EndIf m ← n DIV 2 p ← f(x, m) If n MOD 2 = 0 then return p * p EndIf return x * p * p EndSubalgorithm Which of the following statements are true? ",
-        "answers": [
-            {
-                "A": "The subalgorithm returns xn."
-            },
-            {
-                "B": "If we replace “n MOD 2” with “m MOD 2” then the subalgorithm will return xn."
-            },
-            {
-                "C": "The statements after the recursive call will never be executed."
-            },
-            {
-                "D": "The subalgorithm returns xn if and only if n is even.  13"
-            }
-        ],
-        "code": "",
-        "correct_answers": "BC",
-        "index": 26
-    },
-    {
-        "question": "Let us consider the subalgorithm f2(a,b)  with the input parameters a and b natural numbers and the subalgorithm f(arr, i, n, p)  with the input parameters the array arr with n whole numbers (arr[1], arr[2], …, arr[n]), and the whole numbers i and p. Subalgorithm  f2(a, b): If a > b then return a else return b EndIf EndSubalgorithm Subalgorithm  f(arr, i, n, p): If i = n then return 0 EndIf n1 ← f(arr, i + 1, n, p) n2 ← 0 If p + 1 ≠ i then n2 ← f(arr, i + 1, n, i) + arr[i] EndIf return f2(n1, n2) EndSubalgorithm State the result of the call f(arr, 1, 9, -10), if array arr consists of the values (10, 1, 3, 4, 8, 12, 1, 11, 6). ",
-        "answers": [
-            {
-                "A": "24"
-            },
-            {
-                "B": "37"
-            },
-            {
-                "C": "26"
-            },
-            {
-                "D": "56"
-            }
-        ],
-        "code": "",
-        "correct_answers": "BC",
-        "index": 27
-    },
-    {
-        "question": "Let us consider the subalgorithm verify(n) , with  the input parameter a whole number n (1 ≤ n ≤ 100000) that return s true if n contains a digit that is equal to the sum of the other digits. For example, verify(1517)  returns true because 7 = 1 + 5 + 1. Which of the following alternatives represent correct implementations of the verify(n) subalgorithm? ",
-        "answers": [
-            {
-                "A": "Subalgorithm  verify(n):\ns ← 0\nc ← n\nr ← false\nWhile c > 0 do\ns ← s + c MOD 10\nc ← c DIV 10\nEndWhile\nc ← n\nWhile c > 0 do\nd ← c MOD 10\nIf d = s - d then\nr ← true\nelse\nr ← false\nEndIf\nc ← c DIV 10\nEndWhile\nreturn r\nEndSubalgorithm\n14"
-            },
-            {
-                "B": "Subalgorithm  verify(n):\nm ← -1\nc ← n\nr ← false\nWhile c > 0 do\nd ← c MOD 10\nc ← c DIV 10\nIf d > m then\nm ← d\nEndIf\nEndWhile\nc ← n\ns ← 0\nWhile c > 0 do\nd ← c MOD 10\nIf d ≠ m then\ns ← s + d\nEndIf\nc ← c DIV 10\nEndWhile\nIf s = m then\nr ← true\nEndIf\nreturn r\nEndSubalgorithm"
-            },
-            {
-                "C": "Subalgorithm  verify(n):\nv ← [0,0,0,0,0,0,0,0,0]\nr ← false\nWhile n > 0 do\nd ← n MOD 10\nIf d > 0 then\nv[d] ← v[d] + 1\nEndIf\nn ← n DIV 10\nEndWhile\nm ← 9\nWhile v[m] = 0 do\nm ← m - 1\nEndWhile\nIf v[m] = 1 then\nd ← m\ns ← 0\nm ← m - 1\nWhile m > 0 do\ns ← s + v[m] * m\nm ← m - 1\nEndWhile\nIf d = s then\nr ← true\nEndIf\nEndIf\nreturn r\nEndSubalgorithm"
-            },
-            {
-                "D": "None of the other  answer s are correct.\n\n\n\n15"
-            }
-        ],
-        "code": "",
-        "index": 28
-    },
-    {
-        "question": "Let us consider the subalgorithm f(x, n, e, y, m) , with the input parameters an array x with n elements  that are whole numbers ( x[1], x[2], …, x[n]), an array  y with m elements that are  whole numbers ( y[1], y[2], …, y[m]), and a whole number e that does not appear  in the array y. The subalgorithm returns an array and a natural number. Consider the following subalgorithms as well: • (c, p) ← concatenate(a, n, b, m)  that has the input param eters an array a with n elements that are  whole numbers and an array b with m elements that are  whole numbers, and returns the array c with p elements that are whole numbers , representing the concatenation of the arrays a and b, namely: a[1], a[2], …, a[n], b[1], b[2], …, b[m] • (c, p) ← difference(a, n, b, m) that has the input parameters an array a with n elements that are  whole numbers and an array b with m elements that are  whole numbers,  and returns the array c with p elements that are whole numbers , consist ing of all elements of array a (the remaining elements keeping  their initial ordering) that do not  appear in array b ",
-        "answers": [],
-        "code": "",
-        "index": 29
-    },
-    {
-        "question": "Subalgorithm  f(x, n, e, y, m): 2.     If n = 0 then 3.         return [], 0 4.     EndIf 5.     If x[1] ≠ e then 6.         s ← [] 7.         s[1] ← x[1] 8.         (r1, l1) ← difference(x, n, s, 1) 9.         (r2, l2) ← f(r1, l1, e, y, m) 10.         (r3, l3) ← concatenate(s, 1, r2, l2) 11.         return r3, l3 12.     else 13.         (r1, l1) ← f(y, m, e, x, n) 14.         s ← [] 15.         s[1] ← x[1] 16.         (r2, l2) ← difference(x, n, s, 1) 17.         (r3, l3) ← f(r2, l2 , e, y, m) 18.         (r4, l4) ← concatenate(r1, l1, r3, l3) 19.         return r4, l4 20.     EndIf",
-        "answers": [],
-        "code": "",
-        "index": 30
-    },
-    {
-        "question": "EndSubalgorithm Which of the following statements are true? ",
-        "answers": [
-            {
-                "A": "The subalgorithm f(x, n, e, y, m)  builds a one dimensional array starting from the array x\nin which the occurences of element e are removed and replaced with the elements of array y at\neach occurence of element e. The subalgorithm  returns the built array and its dimension."
-            },
-            {
-                "B": "If arrays x and y do not have common elements, then the array returned by the subalgorithm\nf(x, n, e, y, m)  will consist of distinct elements only."
-            },
-            {
-                "C": "The length of the array returned by the subalgorithm f(x, n, e, y, m), having input\nparameters the non -empty arrays x and y, can be smaller than n."
-            },
-            {
-                "D": "If on line 18, instead of r1 and l1 we had y and m then the function would return a one\ndimensional array (together with its dimension) that would start with the elements of array y,\nfollowed by the elements of array x, the occurences of e being replaced by the elements of\narray y.\n\n\n16"
-            }
-        ],
-        "code": "",
-        "index": 31
-    },
-    {
-        "question": "Let us consider the subalgorithm s(a, b, c) , where a, b, c are non-zero natural  numbers and b ≥ a. Subalgorithm s(a, b, c): If c = 0 then return 1 else If a > b then return (1 / a) * s(a - 1, b, c) else If a < b then return (1 / b) * s(a, b - 1, c) else return c * s(a - 1, b - 1, c - 1) EndIf EndIf EndIf EndSubalgorithm What should be the relation between a, b and c in order to obtain 1/ Cba (where Cba represents combinations of b taken a at a time ). ",
-        "answers": [
-            {
-                "A": "a + b = c"
-            },
-            {
-                "B": "a + c = b"
-            },
-            {
-                "C": "b - c = a"
-            },
-            {
-                "D": "b + c = a - b"
-            }
-        ],
-        "code": "",
-        "index": 32
+        ]
     }
 ]
